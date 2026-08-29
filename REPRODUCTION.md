@@ -12,8 +12,8 @@ this repo before.
 ## 1. Get the two repos as siblings
 
 ```bash
-git clone <this repo's URL> groundskeeper
-git clone <training_data_bot repo's URL> data-training-bot
+git clone https://github.com/Webnai/groundskeeper.git
+git clone https://github.com/Webnai/data-training-bot.git
 # Both directories must be siblings, e.g.:
 #   ~/some-folder/groundskeeper
 #   ~/some-folder/data-training-bot
