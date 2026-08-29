@@ -1,0 +1,92 @@
+[
+  {
+    "example_id": "3cab9a9a-911d-4866-a349-41a0202f4b87",
+    "shipped": true,
+    "reason": "passed structural checks (no grounding check exists today)"
+  },
+  {
+    "example_id": "02b03c8c-46bc-4ab7-bfab-f10418b85670",
+    "shipped": true,
+    "reason": "passed structural checks (no grounding check exists today)"
+  },
+  {
+    "example_id": "707e66cf-f41f-4ee9-91e3-6f7deb49118b",
+    "shipped": true,
+    "reason": "passed structural checks (no grounding check exists today)"
+  },
+  {
+    "example_id": "d75cfbbc-0b28-4f39-9cd9-3e71f9869697",
+    "shipped": true,
+    "reason": "passed structural checks (no grounding check exists today)"
+  },
+  {
+    "example_id": "428b7224-01a7-43b9-a306-f897ab54cf08",
+    "shipped": true,
+    "reason": "passed structural checks (no grounding check exists today)"
+  },
+  {
+    "example_id": "7c75e6d1-7133-4cfe-9ee8-9779f4ad3675",
+    "shipped": true,
+    "reason": "passed structural checks (no grounding check exists today)"
+  },
+  {
+    "example_id": "1a7f50d9-ae6c-4206-b63b-851be3f92819",
+    "shipped": true,
+    "reason": "passed structural checks (no grounding check exists today)"
+  },
+  {
+    "example_id": "4086eae3-f145-47df-85b4-f8d42bcc3d1d",
+    "shipped": true,
+    "reason": "passed structural checks (no grounding check exists today)"
+  },
+  {
+    "example_id": "c92165fe-9ada-46a6-b47c-59903312b315",
+    "shipped": false,
+    "reason": "exact duplicate of example d75cfbbc-0b28-4f39-9cd9-3e71f9869697"
+  },
+  {
+    "example_id": "6806855c-1d49-4bdc-af03-eeab6665d256",
+    "shipped": true,
+    "reason": "passed structural checks (no grounding check exists today)"
+  },
+  {
+    "example_id": "0db2eb3c-11ef-454e-837a-0c869ee3cb8f",
+    "shipped": true,
+    "reason": "passed structural checks (no grounding check exists today)"
+  },
+  {
+    "example_id": "7e50aca5-b3f0-40e9-af8b-98e878beced7",
+    "shipped": true,
+    "reason": "passed structural checks (no grounding check exists today)"
+  },
+  {
+    "example_id": "43c7abcd-050e-4055-9ffe-de7a81f17d06",
+    "shipped": true,
+    "reason": "passed structural checks (no grounding check exists today)"
+  },
+  {
+    "example_id": "0567071c-e6f7-40fb-ab60-43249ead068b",
+    "shipped": true,
+    "reason": "passed structural checks (no grounding check exists today)"
+  },
+  {
+    "example_id": "60b61a14-1fe5-4fa0-b55a-cb66b4f04204",
+    "shipped": true,
+    "reason": "passed structural checks (no grounding check exists today)"
+  },
+  {
+    "example_id": "2538518b-7ff6-43dd-a6dc-f62373577537",
+    "shipped": true,
+    "reason": "passed structural checks (no grounding check exists today)"
+  },
+  {
+    "example_id": "f3f6bada-fab0-4496-ba23-95a6ccb8d4a6",
+    "shipped": true,
+    "reason": "passed structural checks (no grounding check exists today)"
+  },
+  {
+    "example_id": "cf008862-759a-48e9-a557-095f861b07c4",
+    "shipped": true,
+    "reason": "passed structural checks (no grounding check exists today)"
+  }
+]

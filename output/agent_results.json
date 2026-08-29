@@ -1,0 +1,509 @@
+[
+  {
+    "example_id": "3cab9a9a-911d-4866-a349-41a0202f4b87",
+    "verdict": "fixed",
+    "attempts": 1,
+    "final_reason": "Grounded after one regeneration attempt.",
+    "final_answer": "600 requests per minute",
+    "trajectory": [
+      {
+        "step": "grounding_check",
+        "detail": {
+          "verdict": "not_supported",
+          "supporting_quote": "Growth tier: 600 requests per minute",
+          "reason": "The source states the Growth tier limit is 600 requests per minute, but the candidate answer claims 257 requests per minute, which contradicts the passage."
+        }
+      },
+      {
+        "step": "retry_generate",
+        "detail": {
+          "revised_answer": "600 requests per minute"
+        }
+      },
+      {
+        "step": "grounding_check",
+        "detail": {
+          "verdict": "supported",
+          "supporting_quote": "- **Growth tier**: 600 requests per minute, 100,000 requests per day.",
+          "reason": "The source explicitly states that the Growth tier allows 600 requests per minute, which matches the candidate answer."
+        }
+      },
+      {
+        "step": "span_verify",
+        "detail": {
+          "supported": true,
+          "match_ratio": 1.0
+        }
+      }
+    ]
+  },
+  {
+    "example_id": "02b03c8c-46bc-4ab7-bfab-f10418b85670",
+    "verdict": "fixed",
+    "attempts": 1,
+    "final_reason": "Grounded after one regeneration attempt.",
+    "final_answer": "5,000 requests per day",
+    "trajectory": [
+      {
+        "step": "grounding_check",
+        "detail": {
+          "verdict": "not_supported",
+          "supporting_quote": "Free tier: 60 requests per minute, 5,000 requests per day.",
+          "reason": "The source states the Free tier allows 5,000 requests per day, not 2,000 as claimed in the candidate answer."
+        }
+      },
+      {
+        "step": "retry_generate",
+        "detail": {
+          "revised_answer": "5,000 requests per day"
+        }
+      },
+      {
+        "step": "grounding_check",
+        "detail": {
+          "verdict": "supported",
+          "supporting_quote": "- **Free tier**: 60 requests per minute, 5,000 requests per day.",
+          "reason": "The source passage explicitly states that the Free tier allows 5,000 requests per day, which matches the candidate answer."
+        }
+      },
+      {
+        "step": "span_verify",
+        "detail": {
+          "supported": true,
+          "match_ratio": 1.0
+        }
+      }
+    ]
+  },
+  {
+    "example_id": "707e66cf-f41f-4ee9-91e3-6f7deb49118b",
+    "verdict": "pass",
+    "attempts": 0,
+    "final_reason": "Grounded; citation verified against source.",
+    "final_answer": "HTTP 429",
+    "trajectory": [
+      {
+        "step": "grounding_check",
+        "detail": {
+          "verdict": "supported",
+          "supporting_quote": "When a client exceeds its per-minute limit, the API returns an **HTTP 429** status code",
+          "reason": "The candidate answer exactly matches the status code stated in the source passage."
+        }
+      },
+      {
+        "step": "span_verify",
+        "detail": {
+          "supported": true,
+          "match_ratio": 1.0
+        }
+      }
+    ]
+  },
+  {
+    "example_id": "d75cfbbc-0b28-4f39-9cd9-3e71f9869697",
+    "verdict": "pass",
+    "attempts": 0,
+    "final_reason": "Grounded; citation verified against source.",
+    "final_answer": "HTTP 402 status code",
+    "trajectory": [
+      {
+        "step": "grounding_check",
+        "detail": {
+          "verdict": "supported",
+          "supporting_quote": "The daily cap, if exceeded, returns an **HTTP 402** status code instead, since daily overages are billed rather than blocked on the Growth and Enterprise tiers.",
+          "reason": "The passage explicitly states that exceeding the daily cap on Growth and Enterprise tiers returns an HTTP 402 status code."
+        }
+      },
+      {
+        "step": "span_verify",
+        "detail": {
+          "supported": true,
+          "match_ratio": 1.0
+        }
+      }
+    ]
+  },
+  {
+    "example_id": "428b7224-01a7-43b9-a306-f897ab54cf08",
+    "verdict": "fixed",
+    "attempts": 1,
+    "final_reason": "Grounded after one regeneration attempt.",
+    "final_answer": "The burst allowance lasts for a maximum of 10 seconds and equals 20% of the per\u2011minute limit.",
+    "trajectory": [
+      {
+        "step": "grounding_check",
+        "detail": {
+          "verdict": "not_supported",
+          "supporting_quote": "",
+          "reason": "The source states the burst allowance lasts for a maximum of 10 seconds, not 5 seconds. While the 20% per\u2011minute limit is correct, the duration is incorrect, so the answer is not fully supported."
+        }
+      },
+      {
+        "step": "retry_generate",
+        "detail": {
+          "revised_answer": "The burst allowance lasts for a maximum of 10 seconds and equals 20% of the per\u2011minute limit."
+        }
+      },
+      {
+        "step": "grounding_check",
+        "detail": {
+          "verdict": "supported",
+          "supporting_quote": "All tiers receive a burst allowance equal to 20% of their per-minute limit for a maximum of 10 seconds",
+          "reason": "The candidate answer exactly matches the passage's statement about the burst allowance duration and percentage."
+        }
+      },
+      {
+        "step": "span_verify",
+        "detail": {
+          "supported": true,
+          "match_ratio": 1.0
+        }
+      }
+    ]
+  },
+  {
+    "example_id": "7c75e6d1-7133-4cfe-9ee8-9779f4ad3675",
+    "verdict": "pass",
+    "attempts": 0,
+    "final_reason": "Grounded; citation verified against source.",
+    "final_answer": "Free tier accounts that exceed the daily cap are hard\u2011blocked until the next UTC day boundary and are not billed.",
+    "trajectory": [
+      {
+        "step": "grounding_check",
+        "detail": {
+          "verdict": "supported",
+          "supporting_quote": "Free tier accounts that exceed the daily cap are hard-blocked until the next UTC day boundary and are not billed.",
+          "reason": "The candidate answer exactly repeats the sentence from the source passage, confirming it is fully supported."
+        }
+      },
+      {
+        "step": "span_verify",
+        "detail": {
+          "supported": true,
+          "match_ratio": 1.0
+        }
+      }
+    ]
+  },
+  {
+    "example_id": "1a7f50d9-ae6c-4206-b63b-851be3f92819",
+    "verdict": "pass",
+    "attempts": 0,
+    "final_reason": "Grounded; citation verified against source.",
+    "final_answer": "Up to 5 times.",
+    "trajectory": [
+      {
+        "step": "grounding_check",
+        "detail": {
+          "verdict": "supported",
+          "supporting_quote": "Webhook delivery is retried up to **5 times**",
+          "reason": "The candidate answer directly matches the passage, which states that webhook delivery is retried up to 5 times."
+        }
+      },
+      {
+        "step": "span_verify",
+        "detail": {
+          "supported": true,
+          "match_ratio": 1.0
+        }
+      }
+    ]
+  },
+  {
+    "example_id": "4086eae3-f145-47df-85b4-f8d42bcc3d1d",
+    "verdict": "pass",
+    "attempts": 0,
+    "final_reason": "Grounded; citation verified against source.",
+    "final_answer": "30 seconds.",
+    "trajectory": [
+      {
+        "step": "grounding_check",
+        "detail": {
+          "verdict": "supported",
+          "supporting_quote": "Webhook delivery is retried up to **5 times** with exponential backoff starting at 30 seconds, doubling each retry, before the webhook is marked as failed and the customer is notified by email.",
+          "reason": "The passage explicitly states that the exponential backoff starts at 30 seconds, which directly answers the question about the initial backoff interval."
+        }
+      },
+      {
+        "step": "span_verify",
+        "detail": {
+          "supported": true,
+          "match_ratio": 1.0
+        }
+      }
+    ]
+  },
+  {
+    "example_id": "c92165fe-9ada-46a6-b47c-59903312b315",
+    "verdict": "duplicate",
+    "attempts": 0,
+    "final_reason": "Identical answer to example d75cfbbc-0b28-4f39-9cd9-3e71f9869697 (question: 'What HTTP status code is returned when the daily cap is exceeded on Growth and Enterprise tiers?')",
+    "final_answer": "HTTP 402 status code",
+    "trajectory": [
+      {
+        "step": "duplicate_prefilter",
+        "detail": {
+          "reason": "Identical answer to example d75cfbbc-0b28-4f39-9cd9-3e71f9869697 (question: 'What HTTP status code is returned when the daily cap is exceeded on Growth and Enterprise tiers?')"
+        }
+      }
+    ]
+  },
+  {
+    "example_id": "6806855c-1d49-4bdc-af03-eeab6665d256",
+    "verdict": "pass",
+    "attempts": 0,
+    "final_reason": "Grounded; citation verified against source.",
+    "final_answer": "1.5 days per month",
+    "trajectory": [
+      {
+        "step": "grounding_check",
+        "detail": {
+          "verdict": "supported",
+          "supporting_quote": "Full-time employees accrue paid time off (PTO) at a rate of 1.5 days per month, for a maximum of 18 days per calendar year.",
+          "reason": "The candidate answer exactly matches the accrual rate stated in the source passage."
+        }
+      },
+      {
+        "step": "span_verify",
+        "detail": {
+          "supported": true,
+          "match_ratio": 1.0
+        }
+      }
+    ]
+  },
+  {
+    "example_id": "0db2eb3c-11ef-454e-837a-0c869ee3cb8f",
+    "verdict": "fixed",
+    "attempts": 1,
+    "final_reason": "Grounded after one regeneration attempt.",
+    "final_answer": "Employees may carry over up to 5 unused PTO days into the following calendar year.",
+    "trajectory": [
+      {
+        "step": "grounding_check",
+        "detail": {
+          "verdict": "not_supported",
+          "supporting_quote": "Employees may carry over up to **5 unused PTO days** into the following calendar year.",
+          "reason": "The candidate answer states 'Up to 3 unused PTO days', which contradicts the source passage that specifies the limit is up to 5 days."
+        }
+      },
+      {
+        "step": "retry_generate",
+        "detail": {
+          "revised_answer": "Employees may carry over up to 5 unused PTO days into the following calendar year."
+        }
+      },
+      {
+        "step": "grounding_check",
+        "detail": {
+          "verdict": "supported",
+          "supporting_quote": "Employees may carry over up to **5 unused PTO days** into the following calendar year.",
+          "reason": "The candidate answer exactly repeats the sentence from the source passage, confirming the carry\u2011over limit."
+        }
+      },
+      {
+        "step": "span_verify",
+        "detail": {
+          "supported": true,
+          "match_ratio": 1.0
+        }
+      }
+    ]
+  },
+  {
+    "example_id": "7e50aca5-b3f0-40e9-af8b-98e878beced7",
+    "verdict": "pass",
+    "attempts": 0,
+    "final_reason": "Grounded; citation verified against source.",
+    "final_answer": "They are forfeited on December 31st",
+    "trajectory": [
+      {
+        "step": "grounding_check",
+        "detail": {
+          "verdict": "supported",
+          "supporting_quote": "Any unused days beyond that cap are forfeited on **December 31st**.",
+          "reason": "The candidate answer exactly matches the statement in the source that unused PTO days beyond the carryover cap are forfeited on December 31st."
+        }
+      },
+      {
+        "step": "span_verify",
+        "detail": {
+          "supported": true,
+          "match_ratio": 1.0
+        }
+      }
+    ]
+  },
+  {
+    "example_id": "43c7abcd-050e-4055-9ffe-de7a81f17d06",
+    "verdict": "fixed",
+    "attempts": 1,
+    "final_reason": "Grounded after one regeneration attempt.",
+    "final_answer": "There is no cap on carryover for employees who have been with the company for more than 7 years \u2014 they may carry over their full unused balance.",
+    "trajectory": [
+      {
+        "step": "grounding_check",
+        "detail": {
+          "verdict": "not_supported",
+          "supporting_quote": "",
+          "reason": "The source states \"There is no cap on carryover for employees who have been with the company for more than 7 years \u2014 they may carry over their full unused balance.\" The candidate answer says \"There is not no cap on carryover; they may carry over their full unused balance,\" which adds an extra \"not\" and does not match the exact wording from the passage."
+        }
+      },
+      {
+        "step": "retry_generate",
+        "detail": {
+          "revised_answer": "There is no cap on carryover for employees who have been with the company for more than 7 years \u2014 they may carry over their full unused balance."
+        }
+      },
+      {
+        "step": "grounding_check",
+        "detail": {
+          "verdict": "supported",
+          "supporting_quote": "There is no cap on carryover for employees who have been with the company for more than 7 years \u2014 they may carry over their full unused balance.",
+          "reason": "The candidate answer exactly repeats the sentence from the source passage, confirming the carryover policy."
+        }
+      },
+      {
+        "step": "span_verify",
+        "detail": {
+          "supported": true,
+          "match_ratio": 1.0
+        }
+      }
+    ]
+  },
+  {
+    "example_id": "0567071c-e6f7-40fb-ab60-43249ead068b",
+    "verdict": "pass",
+    "attempts": 0,
+    "final_reason": "Grounded; citation verified against source.",
+    "final_answer": "At least 10 business days.",
+    "trajectory": [
+      {
+        "step": "grounding_check",
+        "detail": {
+          "verdict": "supported",
+          "supporting_quote": "PTO requests must be submitted through the HR portal at least **10 business days** in advance for any request longer than 3 consecutive days.",
+          "reason": "The candidate answer exactly matches the requirement stated in the source passage."
+        }
+      },
+      {
+        "step": "span_verify",
+        "detail": {
+          "supported": true,
+          "match_ratio": 1.0
+        }
+      }
+    ]
+  },
+  {
+    "example_id": "60b61a14-1fe5-4fa0-b55a-cb66b4f04204",
+    "verdict": "pass",
+    "attempts": 0,
+    "final_reason": "Grounded; citation verified against source.",
+    "final_answer": "The manager has 3 business days.",
+    "trajectory": [
+      {
+        "step": "grounding_check",
+        "detail": {
+          "verdict": "supported",
+          "supporting_quote": "the manager has 3 business days to approve or deny a request before it auto\u2011escalates to the department director",
+          "reason": "The candidate answer exactly matches the statement in the source passage regarding the manager's approval timeframe."
+        }
+      },
+      {
+        "step": "span_verify",
+        "detail": {
+          "supported": true,
+          "match_ratio": 1.0
+        }
+      }
+    ]
+  },
+  {
+    "example_id": "2538518b-7ff6-43dd-a6dc-f62373577537",
+    "verdict": "pass",
+    "attempts": 0,
+    "final_reason": "Grounded; citation verified against source.",
+    "final_answer": "During the last week of each fiscal quarter, which are the final 7 calendar days of March, June, September, and December, except for emergency leave.",
+    "trajectory": [
+      {
+        "step": "grounding_check",
+        "detail": {
+          "verdict": "supported",
+          "supporting_quote": "PTO requests are not accepted during the last week of each fiscal quarter (the final 7 calendar days of March, June, September, and December), except for emergency leave, which is handled separately under the Emergency Leave Policy.",
+          "reason": "The candidate answer restates the passage verbatim, correctly describing when PTO requests are not accepted and noting the exception for emergency leave."
+        }
+      },
+      {
+        "step": "span_verify",
+        "detail": {
+          "supported": true,
+          "match_ratio": 1.0
+        }
+      }
+    ]
+  },
+  {
+    "example_id": "f3f6bada-fab0-4496-ba23-95a6ccb8d4a6",
+    "verdict": "pass",
+    "attempts": 0,
+    "final_reason": "Grounded; citation verified against source.",
+    "final_answer": "Employees receive 10 sick days per year.",
+    "trajectory": [
+      {
+        "step": "grounding_check",
+        "detail": {
+          "verdict": "supported",
+          "supporting_quote": "Employees receive **10 sick days per year**, which do not carry over and are not paid out upon termination.",
+          "reason": "The source explicitly states that employees receive 10 sick days per year, matching the candidate answer."
+        }
+      },
+      {
+        "step": "span_verify",
+        "detail": {
+          "supported": true,
+          "match_ratio": 1.0
+        }
+      }
+    ]
+  },
+  {
+    "example_id": "cf008862-759a-48e9-a557-095f861b07c4",
+    "verdict": "fixed",
+    "attempts": 1,
+    "final_reason": "Grounded after one regeneration attempt.",
+    "final_answer": "Sick days do not carry over to the next year and are not paid out upon termination.",
+    "trajectory": [
+      {
+        "step": "grounding_check",
+        "detail": {
+          "verdict": "not_supported",
+          "supporting_quote": "",
+          "reason": "The source states sick days \"do not carry over and are not paid out upon termination.\" The candidate answer says \"are not not paid out,\" which is a double negative that contradicts the source's statement that they are not paid out."
+        }
+      },
+      {
+        "step": "retry_generate",
+        "detail": {
+          "revised_answer": "Sick days do not carry over to the next year and are not paid out upon termination."
+        }
+      },
+      {
+        "step": "grounding_check",
+        "detail": {
+          "verdict": "supported",
+          "supporting_quote": "Employees receive **10 sick days per year**, which do not carry over and are not paid out upon termination.",
+          "reason": "The source explicitly states that sick days do not carry over and are not paid out upon termination, which matches the candidate answer exactly."
+        }
+      },
+      {
+        "step": "span_verify",
+        "detail": {
+          "supported": true,
+          "match_ratio": 1.0
+        }
+      }
+    ]
+  }
+]

@@ -1,0 +1,30 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "groundskeeper"
+version = "0.1.0"
+description = "Grounding auditor for LLM fine-tuning datasets: verifies generated training examples are actually supported by their source text before you spend compute training on them."
+readme = "README.md"
+requires-python = ">=3.11"
+
+dependencies = [
+    # training-data-bot is NOT listed here on purpose: it is not published to
+    # PyPI, so a plain dependency-name reference would fail to resolve on a
+    # judge's machine. It's installed as a separate editable sibling repo —
+    # see REPRODUCTION.md for the exact two-command install sequence. This
+    # keeps the dependency boundary explicit rather than hiding it behind
+    # packaging machinery.
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.2", "pytest-asyncio>=0.23", "ruff>=0.5"]
+
+[tool.pytest.ini_options]
+asyncio_mode = "auto"
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"

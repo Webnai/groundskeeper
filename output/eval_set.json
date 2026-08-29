@@ -1,0 +1,344 @@
+[
+  {
+    "example": {
+      "id": "3cab9a9a-911d-4866-a349-41a0202f4b87",
+      "created_at": "2026-08-29T12:32:26.542499Z",
+      "updated_at": null,
+      "metadata": {},
+      "input_text": "What is the per\u2011minute request limit for the Growth tier?",
+      "output_text": "257 requests per minute",
+      "task_type": "qa_generation",
+      "source_document_id": "8588f0c3-1052-4b75-a6cf-c2daa08c390c",
+      "source_chunk_id": "99ab7c45-5f70-4ca6-8a89-18562f6adad9",
+      "quality_scores": {
+        "generation_time_seconds": 1.4308782640000572
+      }
+    },
+    "label": "corrupted",
+    "corruption_type": "number_swap",
+    "ground_truth_note": "Altered a number in the answer"
+  },
+  {
+    "example": {
+      "id": "02b03c8c-46bc-4ab7-bfab-f10418b85670",
+      "created_at": "2026-08-29T12:32:26.542528Z",
+      "updated_at": null,
+      "metadata": {},
+      "input_text": "How many daily requests are allowed for the Free tier?",
+      "output_text": "2,000 requests per day",
+      "task_type": "qa_generation",
+      "source_document_id": "8588f0c3-1052-4b75-a6cf-c2daa08c390c",
+      "source_chunk_id": "99ab7c45-5f70-4ca6-8a89-18562f6adad9",
+      "quality_scores": {
+        "generation_time_seconds": 1.4308782640000572
+      }
+    },
+    "label": "corrupted",
+    "corruption_type": "number_swap",
+    "ground_truth_note": "Altered a number in the answer"
+  },
+  {
+    "example": {
+      "id": "707e66cf-f41f-4ee9-91e3-6f7deb49118b",
+      "created_at": "2026-08-29T12:32:26.542540Z",
+      "updated_at": null,
+      "metadata": {},
+      "input_text": "What HTTP status code does the API return when a client exceeds its per\u2011minute limit?",
+      "output_text": "HTTP 429",
+      "task_type": "qa_generation",
+      "source_document_id": "8588f0c3-1052-4b75-a6cf-c2daa08c390c",
+      "source_chunk_id": "99ab7c45-5f70-4ca6-8a89-18562f6adad9",
+      "quality_scores": {
+        "generation_time_seconds": 1.4308782640000572
+      }
+    },
+    "label": "clean",
+    "corruption_type": null,
+    "ground_truth_note": "unmodified"
+  },
+  {
+    "example": {
+      "id": "d75cfbbc-0b28-4f39-9cd9-3e71f9869697",
+      "created_at": "2026-08-29T12:32:26.915116Z",
+      "updated_at": null,
+      "metadata": {},
+      "input_text": "What HTTP status code is returned when the daily cap is exceeded on Growth and Enterprise tiers?",
+      "output_text": "HTTP 402 status code",
+      "task_type": "qa_generation",
+      "source_document_id": "8588f0c3-1052-4b75-a6cf-c2daa08c390c",
+      "source_chunk_id": "2fb94e3b-85f0-4b96-86f5-e1e38fc5ffa4",
+      "quality_scores": {
+        "generation_time_seconds": 1.3738156900071772
+      }
+    },
+    "label": "clean",
+    "corruption_type": null,
+    "ground_truth_note": "unmodified"
+  },
+  {
+    "example": {
+      "id": "428b7224-01a7-43b9-a306-f897ab54cf08",
+      "created_at": "2026-08-29T12:32:26.915161Z",
+      "updated_at": null,
+      "metadata": {},
+      "input_text": "How long does the burst allowance last and what percentage of the per\u2011minute limit does it represent?",
+      "output_text": "It lasts for a maximum of 5 seconds and equals 20% of the per\u2011minute limit.",
+      "task_type": "qa_generation",
+      "source_document_id": "8588f0c3-1052-4b75-a6cf-c2daa08c390c",
+      "source_chunk_id": "2fb94e3b-85f0-4b96-86f5-e1e38fc5ffa4",
+      "quality_scores": {
+        "generation_time_seconds": 1.3738156900071772
+      }
+    },
+    "label": "corrupted",
+    "corruption_type": "number_swap",
+    "ground_truth_note": "Altered a number in the answer"
+  },
+  {
+    "example": {
+      "id": "7c75e6d1-7133-4cfe-9ee8-9779f4ad3675",
+      "created_at": "2026-08-29T12:32:26.915185Z",
+      "updated_at": null,
+      "metadata": {},
+      "input_text": "What happens to free tier accounts that exceed the daily cap?",
+      "output_text": "Free tier accounts that exceed the daily cap are hard\u2011blocked until the next UTC day boundary and are not billed.",
+      "task_type": "qa_generation",
+      "source_document_id": "8588f0c3-1052-4b75-a6cf-c2daa08c390c",
+      "source_chunk_id": "2fb94e3b-85f0-4b96-86f5-e1e38fc5ffa4",
+      "quality_scores": {
+        "generation_time_seconds": 1.3738156900071772
+      }
+    },
+    "label": "clean",
+    "corruption_type": null,
+    "ground_truth_note": "unmodified"
+  },
+  {
+    "example": {
+      "id": "1a7f50d9-ae6c-4206-b63b-851be3f92819",
+      "created_at": "2026-08-29T12:32:26.892452Z",
+      "updated_at": null,
+      "metadata": {},
+      "input_text": "How many times is webhook delivery retried according to the passage?",
+      "output_text": "Up to 5 times.",
+      "task_type": "qa_generation",
+      "source_document_id": "8588f0c3-1052-4b75-a6cf-c2daa08c390c",
+      "source_chunk_id": "52e255fe-cc75-4581-9eb7-558da1d7412d",
+      "quality_scores": {
+        "generation_time_seconds": 1.3505878620053409
+      }
+    },
+    "label": "clean",
+    "corruption_type": null,
+    "ground_truth_note": "unmodified"
+  },
+  {
+    "example": {
+      "id": "4086eae3-f145-47df-85b4-f8d42bcc3d1d",
+      "created_at": "2026-08-29T12:32:26.892474Z",
+      "updated_at": null,
+      "metadata": {},
+      "input_text": "What is the initial backoff interval for webhook retries?",
+      "output_text": "30 seconds.",
+      "task_type": "qa_generation",
+      "source_document_id": "8588f0c3-1052-4b75-a6cf-c2daa08c390c",
+      "source_chunk_id": "52e255fe-cc75-4581-9eb7-558da1d7412d",
+      "quality_scores": {
+        "generation_time_seconds": 1.3505878620053409
+      }
+    },
+    "label": "clean",
+    "corruption_type": null,
+    "ground_truth_note": "unmodified"
+  },
+  {
+    "example": {
+      "id": "c92165fe-9ada-46a6-b47c-59903312b315",
+      "created_at": "2026-08-29T12:32:26.892484Z",
+      "updated_at": null,
+      "metadata": {},
+      "input_text": "How is the customer notified after a webhook is marked as failed?",
+      "output_text": "HTTP 402 status code",
+      "task_type": "qa_generation",
+      "source_document_id": "8588f0c3-1052-4b75-a6cf-c2daa08c390c",
+      "source_chunk_id": "52e255fe-cc75-4581-9eb7-558da1d7412d",
+      "quality_scores": {
+        "generation_time_seconds": 1.3505878620053409
+      }
+    },
+    "label": "corrupted",
+    "corruption_type": "unrelated_answer",
+    "ground_truth_note": "Swapped in the answer to a different question: 'What HTTP status code is returned when the daily cap is exceeded on Growth and Enterprise tiers?'"
+  },
+  {
+    "example": {
+      "id": "6806855c-1d49-4bdc-af03-eeab6665d256",
+      "created_at": "2026-08-29T12:32:26.795257Z",
+      "updated_at": null,
+      "metadata": {},
+      "input_text": "What is the paid time off (PTO) accrual rate for full-time employees?",
+      "output_text": "1.5 days per month",
+      "task_type": "qa_generation",
+      "source_document_id": "deebf43e-9754-4acf-a87d-9a1fbe423925",
+      "source_chunk_id": "58e9ecd1-df4a-4ee5-8570-c2e1f04b5e8b",
+      "quality_scores": {
+        "generation_time_seconds": 1.2518928299978143
+      }
+    },
+    "label": "clean",
+    "corruption_type": null,
+    "ground_truth_note": "unmodified"
+  },
+  {
+    "example": {
+      "id": "0db2eb3c-11ef-454e-837a-0c869ee3cb8f",
+      "created_at": "2026-08-29T12:32:26.795318Z",
+      "updated_at": null,
+      "metadata": {},
+      "input_text": "How many unused PTO days may be carried over into the following calendar year?",
+      "output_text": "Up to 3 unused PTO days",
+      "task_type": "qa_generation",
+      "source_document_id": "deebf43e-9754-4acf-a87d-9a1fbe423925",
+      "source_chunk_id": "58e9ecd1-df4a-4ee5-8570-c2e1f04b5e8b",
+      "quality_scores": {
+        "generation_time_seconds": 1.2518928299978143
+      }
+    },
+    "label": "corrupted",
+    "corruption_type": "number_swap",
+    "ground_truth_note": "Altered a number in the answer"
+  },
+  {
+    "example": {
+      "id": "7e50aca5-b3f0-40e9-af8b-98e878beced7",
+      "created_at": "2026-08-29T12:32:26.795349Z",
+      "updated_at": null,
+      "metadata": {},
+      "input_text": "When are unused PTO days beyond the carryover cap forfeited?",
+      "output_text": "They are forfeited on December 31st",
+      "task_type": "qa_generation",
+      "source_document_id": "deebf43e-9754-4acf-a87d-9a1fbe423925",
+      "source_chunk_id": "58e9ecd1-df4a-4ee5-8570-c2e1f04b5e8b",
+      "quality_scores": {
+        "generation_time_seconds": 1.2518928299978143
+      }
+    },
+    "label": "clean",
+    "corruption_type": null,
+    "ground_truth_note": "unmodified"
+  },
+  {
+    "example": {
+      "id": "43c7abcd-050e-4055-9ffe-de7a81f17d06",
+      "created_at": "2026-08-29T12:32:27.616224Z",
+      "updated_at": null,
+      "metadata": {},
+      "input_text": "What is the carryover policy for employees who have been with the company for more than 7 years?",
+      "output_text": "There is not no cap on carryover; they may carry over their full unused balance.",
+      "task_type": "qa_generation",
+      "source_document_id": "deebf43e-9754-4acf-a87d-9a1fbe423925",
+      "source_chunk_id": "53bb6cca-06c3-42e9-9095-ccdbcd0a5870",
+      "quality_scores": {
+        "generation_time_seconds": 1.0735588879906572
+      }
+    },
+    "label": "corrupted",
+    "corruption_type": "negation",
+    "ground_truth_note": "Flipped 'is' -> 'is not'"
+  },
+  {
+    "example": {
+      "id": "0567071c-e6f7-40fb-ab60-43249ead068b",
+      "created_at": "2026-08-29T12:32:27.616247Z",
+      "updated_at": null,
+      "metadata": {},
+      "input_text": "How many business days in advance must a PTO request be submitted for a request longer than three consecutive days?",
+      "output_text": "At least 10 business days.",
+      "task_type": "qa_generation",
+      "source_document_id": "deebf43e-9754-4acf-a87d-9a1fbe423925",
+      "source_chunk_id": "53bb6cca-06c3-42e9-9095-ccdbcd0a5870",
+      "quality_scores": {
+        "generation_time_seconds": 1.0735588879906572
+      }
+    },
+    "label": "clean",
+    "corruption_type": null,
+    "ground_truth_note": "unmodified"
+  },
+  {
+    "example": {
+      "id": "60b61a14-1fe5-4fa0-b55a-cb66b4f04204",
+      "created_at": "2026-08-29T12:32:27.616260Z",
+      "updated_at": null,
+      "metadata": {},
+      "input_text": "How long does a manager have to approve or deny a PTO request before it auto\u2011escalates to the department director?",
+      "output_text": "The manager has 3 business days.",
+      "task_type": "qa_generation",
+      "source_document_id": "deebf43e-9754-4acf-a87d-9a1fbe423925",
+      "source_chunk_id": "53bb6cca-06c3-42e9-9095-ccdbcd0a5870",
+      "quality_scores": {
+        "generation_time_seconds": 1.0735588879906572
+      }
+    },
+    "label": "clean",
+    "corruption_type": null,
+    "ground_truth_note": "unmodified"
+  },
+  {
+    "example": {
+      "id": "2538518b-7ff6-43dd-a6dc-f62373577537",
+      "created_at": "2026-08-29T12:32:36.001347Z",
+      "updated_at": null,
+      "metadata": {},
+      "input_text": "When are PTO requests not accepted?",
+      "output_text": "During the last week of each fiscal quarter, which are the final 7 calendar days of March, June, September, and December, except for emergency leave.",
+      "task_type": "qa_generation",
+      "source_document_id": "deebf43e-9754-4acf-a87d-9a1fbe423925",
+      "source_chunk_id": "b6847ad4-e0a6-44b9-9ddb-fffcd75196a4",
+      "quality_scores": {
+        "generation_time_seconds": 9.205748723994475
+      }
+    },
+    "label": "clean",
+    "corruption_type": null,
+    "ground_truth_note": "unmodified"
+  },
+  {
+    "example": {
+      "id": "f3f6bada-fab0-4496-ba23-95a6ccb8d4a6",
+      "created_at": "2026-08-29T12:32:36.001363Z",
+      "updated_at": null,
+      "metadata": {},
+      "input_text": "How many sick days does each employee receive per year?",
+      "output_text": "Employees receive 10 sick days per year.",
+      "task_type": "qa_generation",
+      "source_document_id": "deebf43e-9754-4acf-a87d-9a1fbe423925",
+      "source_chunk_id": "b6847ad4-e0a6-44b9-9ddb-fffcd75196a4",
+      "quality_scores": {
+        "generation_time_seconds": 9.205748723994475
+      }
+    },
+    "label": "clean",
+    "corruption_type": null,
+    "ground_truth_note": "unmodified"
+  },
+  {
+    "example": {
+      "id": "cf008862-759a-48e9-a557-095f861b07c4",
+      "created_at": "2026-08-29T12:32:36.001371Z",
+      "updated_at": null,
+      "metadata": {},
+      "input_text": "Do sick days carry over to the next year or get paid out upon termination?",
+      "output_text": "Sick days do not carry over and are not not paid out upon termination.",
+      "task_type": "qa_generation",
+      "source_document_id": "deebf43e-9754-4acf-a87d-9a1fbe423925",
+      "source_chunk_id": "b6847ad4-e0a6-44b9-9ddb-fffcd75196a4",
+      "quality_scores": {
+        "generation_time_seconds": 9.205748723994475
+      }
+    },
+    "label": "corrupted",
+    "corruption_type": "negation",
+    "ground_truth_note": "Flipped 'are' -> 'are not'"
+  }
+]
