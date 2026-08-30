@@ -11,7 +11,7 @@ Built for the **micro1 Frontier Engineering Challenge 2026**.
 
 An AI engineer or small ML team who generates a fine-tuning dataset from
 their own documents using an LLM pipeline (this project's companion
-library, [`training_data_bot`](../data-training-bot), built separately and
+library, [`training_data_bot`](https://github.com/Webnai/data-training-bot), built separately and
 used here unmodified — see "What existed before" below), and is about to
 spend real compute fine-tuning a model on it.
 
