@@ -2,11 +2,11 @@
 
 For each training example, in order:
 
-1. **Duplicate pre-filter** (cheap, no LLM call) — an exact-duplicate answer
-   elsewhere in the batch is escalated immediately. This reuses a lesson
-   observed directly in `training_data_bot`'s own test suite: a
-   deterministic generator produces identical answers across different
-   documents, and no LLM call is needed to catch that.
+1. **Duplicate pre-filter** (cheap, no LLM call) — an exact-duplicate
+   (question, answer) pair elsewhere in the batch is escalated immediately.
+   Keyed on the pair rather than the answer alone: on short categorical
+   answers (survey data — "Yes"/"No"/"24") the same answer text legitimately
+   recurs across unrelated questions, which is coincidence, not redundancy.
 2. **Grounding check** — an independent LLM call (no memory of however the
    example was originally generated) is asked to judge whether the answer
    is supported by the source passage, and to quote its exact evidence.
@@ -161,22 +161,30 @@ class GroundingAuditor:
     def _find_duplicates(
         self, examples: list[TrainingExample]
     ) -> tuple[set[UUID], dict[UUID, str]]:
-        """Exact-duplicate answers (normalized) elsewhere in the batch, escalated for free."""
-        seen: dict[str, TrainingExample] = {}
+        """Exact-duplicate (question, answer) pairs elsewhere in the batch, escalated for free.
+
+        Keyed on the pair, not the answer alone: on short categorical answers
+        (survey data — "Yes"/"No"/"24") the same answer text legitimately
+        recurs across unrelated questions, which answer-only matching mistook
+        for redundancy. A true duplicate is the same question answered the
+        same way twice (e.g. via overlapping chunks).
+        """
+        seen: dict[tuple[str, str], TrainingExample] = {}
         duplicate_ids: set[UUID] = set()
         reasons: dict[UUID, str] = {}
         for example in examples:
-            normalized = " ".join(example.output_text.lower().split())
-            if not normalized:
+            normalized_answer = " ".join(example.output_text.lower().split())
+            if not normalized_answer:
                 continue
-            if normalized in seen:
+            key = (" ".join(example.input_text.lower().split()), normalized_answer)
+            if key in seen:
                 duplicate_ids.add(example.id)
                 reasons[example.id] = (
-                    f"Identical answer to example {seen[normalized].id} "
-                    f"(question: {seen[normalized].input_text!r})"
+                    f"Identical question+answer to example {seen[key].id} "
+                    f"(question: {seen[key].input_text!r})"
                 )
             else:
-                seen[normalized] = example
+                seen[key] = example
         return duplicate_ids, reasons
 
     async def _audit_one(self, example: TrainingExample, source_text: str) -> AuditResult:

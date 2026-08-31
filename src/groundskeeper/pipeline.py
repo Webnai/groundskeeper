@@ -40,8 +40,14 @@ logger = get_logger("groundskeeper.pipeline")
 async def generate_labeled_dataset(
     corruption_rate: float = 0.4,
     seed: int = 7,
+    source_dir: Path | None = None,
 ) -> tuple[list[LabeledExample], dict[UUID, str], list[Document]]:
     """Load source docs, chunk, generate QA examples, inject known corruption.
+
+    `source_dir` defaults to this project's own synthetic policy docs
+    (`SOURCE_DOCS_DIR`) — pass any other directory to audit a different
+    document set (e.g. a sibling project's own data) without touching the
+    frozen PTO/rate-limits evidence this repo's submission docs reference.
 
     Returns (labeled_examples, source_lookup, documents) where source_lookup
     maps a chunk id (or document id, for chunks that don't survive — see
@@ -49,7 +55,7 @@ async def generate_labeled_dataset(
     generated from.
     """
     loader = UnifiedLoader()
-    documents = await loader.load_directory(SOURCE_DOCS_DIR)
+    documents = await loader.load_directory(source_dir or SOURCE_DOCS_DIR)
     logger.info("Loaded %d source document(s)", len(documents))
 
     preprocessor = TextPreprocessor(

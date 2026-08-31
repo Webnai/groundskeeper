@@ -8,23 +8,24 @@ cost side of that tradeoff (false-flag rate on genuinely clean examples),
 broken down by corruption type. Writes `output/evaluation_report.md`.
 
 Usage:
-    python scripts/run_evaluation.py
+    python scripts/run_evaluation.py [--output-dir output/other]
 """
 
 from __future__ import annotations
 
+import argparse
 from pathlib import Path
 
 from groundskeeper.report import render_evaluation_markdown
 from groundskeeper.serde import load_agent_results, load_baseline_results, load_labeled_dataset
 
-OUTPUT_DIR = Path(__file__).parent.parent / "output"
+DEFAULT_OUTPUT_DIR = Path(__file__).parent.parent / "output"
 
 
-def main() -> None:
-    labeled = load_labeled_dataset(OUTPUT_DIR / "eval_set.json")
-    baseline = load_baseline_results(OUTPUT_DIR / "baseline_results.json")
-    agent = load_agent_results(OUTPUT_DIR / "agent_results.json")
+def main(output_dir: Path) -> None:
+    labeled = load_labeled_dataset(output_dir / "eval_set.json")
+    baseline = load_baseline_results(output_dir / "baseline_results.json")
+    agent = load_agent_results(output_dir / "agent_results.json")
 
     rows = []
     for item in labeled:
@@ -45,12 +46,15 @@ def main() -> None:
         )
 
     report_markdown, summary = render_evaluation_markdown(rows)
-    (OUTPUT_DIR / "evaluation_report.md").write_text(report_markdown)
+    (output_dir / "evaluation_report.md").write_text(report_markdown)
 
     print(report_markdown)
-    print(f"\nWrote {OUTPUT_DIR / 'evaluation_report.md'}")
+    print(f"\nWrote {output_dir / 'evaluation_report.md'}")
     print(f"\nSummary: {summary}")
 
 
 if __name__ == "__main__":
-    main()
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--output-dir", type=Path, default=DEFAULT_OUTPUT_DIR)
+    args = parser.parse_args()
+    main(args.output_dir)

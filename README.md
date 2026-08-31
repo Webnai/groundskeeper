@@ -39,14 +39,12 @@ iteration story and `output/evaluation_report.md` for the raw report):
 
 | Metric | Baseline (today's `QualityEvaluator`) | Groundskeeper Agent | Change |
 |---|---|---|---|
-| Catch rate on deliberately corrupted examples (n=7) | 14% | **100%** | +86 points |
+| Catch rate on deliberately corrupted examples (n=7) | 0% | **100%** | +100 points |
 | False-flag rate on genuinely clean examples (n=11) | 0% | **0%** | +0 points |
 
-The baseline's one "catch" wasn't grounding-awareness — it was luck: the
-corruption happened to duplicate another example's exact answer, which the
-existing duplicate-detector already catches for unrelated reasons. Zero of
-the baseline's catches came from checking whether an answer was actually
-*true*, because it never checks that. The agent catches every corrupted
+Zero of the baseline's catches come from checking whether an answer was
+actually *true*, because it never checks that — its only checks are "empty
+output?" and "exact duplicate?". The agent catches every corrupted
 example (some outright, most by regenerating a corrected, verifiably
 grounded answer) with zero cost to the clean examples.
 

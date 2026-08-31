@@ -119,11 +119,13 @@ async def test_fabricated_citation_does_not_pass_span_check() -> None:
 
 
 async def test_duplicate_prefilter_skips_llm_call_for_second_occurrence() -> None:
+    """A true duplicate: the same question, answered the same way, twice
+    (e.g. via overlapping chunks) — this is genuine redundancy."""
     client = ScriptedAIClient(
         ['{"verdict": "supported", "supporting_quote": "1.5 days per month", "reason": "matches"}']
     )
-    first = _example("Employees accrue 1.5 days per month.", question="Q1?")
-    duplicate = _example("Employees accrue 1.5 days per month.", question="Q2?")
+    first = _example("Employees accrue 1.5 days per month.", question="How many PTO days per month?")
+    duplicate = _example("Employees accrue 1.5 days per month.", question="How many PTO days per month?")
     auditor = GroundingAuditor(client, max_retries=1, max_concurrency=1)
 
     results = await auditor.audit_dataset(
@@ -136,6 +138,37 @@ async def test_duplicate_prefilter_skips_llm_call_for_second_occurrence() -> Non
     assert verdicts[duplicate.id] == Verdict.DUPLICATE
     # Only the first example ever reached the LLM; the duplicate cost zero calls.
     assert client.call_count == 1
+
+
+async def test_same_answer_different_question_is_not_a_duplicate() -> None:
+    """Coincidentally identical short answers to different questions (common
+    on categorical/survey data — "Yes"/"No"/"24") must NOT be treated as
+    redundant: they're two different facts that happen to render the same."""
+    client = ScriptedAIClient(
+        [
+            '{"verdict": "supported", "supporting_quote": "1.5 days per month", "reason": "matches"}',
+            '{"verdict": "supported", "supporting_quote": "1.5 days per month", "reason": "matches"}',
+        ]
+    )
+    first = _example("1.5 days per month.", question="How many PTO days does Alice get per month?")
+    same_answer_different_fact = _example(
+        "1.5 days per month.", question="How many PTO days does Bob get per month?"
+    )
+    auditor = GroundingAuditor(client, max_retries=1, max_concurrency=1)
+
+    results = await auditor.audit_dataset(
+        [first, same_answer_different_fact],
+        {
+            first.source_document_id: SOURCE_TEXT,
+            same_answer_different_fact.source_document_id: SOURCE_TEXT,
+        },
+    )
+
+    verdicts = {r.example.id: r.verdict for r in results}
+    assert verdicts[first.id] == Verdict.PASS
+    assert verdicts[same_answer_different_fact.id] == Verdict.PASS
+    # Both distinct questions actually reached the grounding check.
+    assert client.call_count == 2
 
 
 async def test_persistent_ai_failure_on_one_example_does_not_crash_the_batch() -> None:

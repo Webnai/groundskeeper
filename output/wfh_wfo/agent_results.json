@@ -1,0 +1,976 @@
+[
+  {
+    "example_id": "ef26785d-0b38-4828-ab89-46a1d115fe06",
+    "verdict": "pass",
+    "attempts": 0,
+    "final_reason": "Grounded; citation verified against source.",
+    "final_answer": "1",
+    "trajectory": [
+      {
+        "step": "grounding_check",
+        "detail": {
+          "verdict": "supported",
+          "supporting_quote": "ID: 1",
+          "reason": "The passage explicitly lists 'ID: 1' for the described person, matching the answer."
+        }
+      },
+      {
+        "step": "span_verify",
+        "detail": {
+          "supported": true,
+          "match_ratio": 1.0
+        }
+      }
+    ]
+  },
+  {
+    "example_id": "f2fe1c55-2629-4d84-a7a1-b5f1b503400c",
+    "verdict": "fixed",
+    "attempts": 1,
+    "final_reason": "Grounded after one regeneration attempt.",
+    "final_answer": "Tutor",
+    "trajectory": [
+      {
+        "step": "grounding_check",
+        "detail": {
+          "verdict": "not_supported",
+          "supporting_quote": "",
+          "reason": "The source passage states Bhavana's occupation is \"Tutor\", but the candidate answer is \"24\", which does not match or reflect the occupation information."
+        }
+      },
+      {
+        "step": "retry_generate",
+        "detail": {
+          "revised_answer": "Tutor"
+        }
+      },
+      {
+        "step": "grounding_check",
+        "detail": {
+          "verdict": "supported",
+          "supporting_quote": "Occupation: Tutor",
+          "reason": "The source passage explicitly lists Bhavana's occupation as Tutor, directly matching the candidate answer."
+        }
+      },
+      {
+        "step": "span_verify",
+        "detail": {
+          "supported": true,
+          "match_ratio": 1.0
+        }
+      }
+    ]
+  },
+  {
+    "example_id": "b4999001-26da-4cb9-b89d-e9b8e53028fe",
+    "verdict": "fixed",
+    "attempts": 1,
+    "final_reason": "Grounded after one regeneration attempt.",
+    "final_answer": "Yes",
+    "trajectory": [
+      {
+        "step": "grounding_check",
+        "detail": {
+          "verdict": "not_supported",
+          "supporting_quote": "kids: Yes",
+          "reason": "The source passage states that Bhavana has kids (\"kids: Yes\"), but the candidate answer says \"No\", which directly contradicts the information provided."
+        }
+      },
+      {
+        "step": "retry_generate",
+        "detail": {
+          "revised_answer": "Yes"
+        }
+      },
+      {
+        "step": "grounding_check",
+        "detail": {
+          "verdict": "supported",
+          "supporting_quote": "kids: Yes",
+          "reason": "The source passage explicitly lists 'kids: Yes' for Bhavana, confirming she has kids."
+        }
+      },
+      {
+        "step": "span_verify",
+        "detail": {
+          "supported": true,
+          "match_ratio": 1.0
+        }
+      }
+    ]
+  },
+  {
+    "example_id": "d54d5be9-a9c7-478e-9c4c-1d8d6440c182",
+    "verdict": "fixed",
+    "attempts": 1,
+    "final_reason": "Grounded after one regeneration attempt.",
+    "final_answer": "Tutor",
+    "trajectory": [
+      {
+        "step": "grounding_check",
+        "detail": {
+          "verdict": "not_supported",
+          "supporting_quote": "",
+          "reason": "The candidate answer 'Yes' does not state Harry's occupation. The source passage explicitly says 'Occupation: Tutor', which is not reflected in the answer."
+        }
+      },
+      {
+        "step": "retry_generate",
+        "detail": {
+          "revised_answer": "Tutor"
+        }
+      },
+      {
+        "step": "grounding_check",
+        "detail": {
+          "verdict": "supported",
+          "supporting_quote": "Occupation: Tutor",
+          "reason": "The source passage explicitly lists Harry's occupation as Tutor, directly supporting the answer."
+        }
+      },
+      {
+        "step": "span_verify",
+        "detail": {
+          "supported": true,
+          "match_ratio": 1.0
+        }
+      }
+    ]
+  },
+  {
+    "example_id": "97aeea08-2910-4aa2-ad2b-fb88fd19729a",
+    "verdict": "pass",
+    "attempts": 0,
+    "final_reason": "Grounded; citation verified against source.",
+    "final_answer": "24",
+    "trajectory": [
+      {
+        "step": "grounding_check",
+        "detail": {
+          "verdict": "supported",
+          "supporting_quote": "Age: 24",
+          "reason": "The source passage explicitly states 'Age: 24' for Harry, directly supporting the answer."
+        }
+      },
+      {
+        "step": "span_verify",
+        "detail": {
+          "supported": true,
+          "match_ratio": 1.0
+        }
+      }
+    ]
+  },
+  {
+    "example_id": "7e345d8a-2907-435f-923d-a03031ab0135",
+    "verdict": "pass",
+    "attempts": 0,
+    "final_reason": "Grounded; citation verified against source.",
+    "final_answer": "No",
+    "trajectory": [
+      {
+        "step": "grounding_check",
+        "detail": {
+          "verdict": "supported",
+          "supporting_quote": "kids: No",
+          "reason": "The source passage explicitly lists 'kids: No' for Harry, directly confirming that he does not have any kids."
+        }
+      },
+      {
+        "step": "span_verify",
+        "detail": {
+          "supported": true,
+          "match_ratio": 1.0
+        }
+      }
+    ]
+  },
+  {
+    "example_id": "00f4beff-06cf-4dfe-bcff-1a5542d52eb5",
+    "verdict": "pass",
+    "attempts": 0,
+    "final_reason": "Grounded; citation verified against source.",
+    "final_answer": "CALMER",
+    "trajectory": [
+      {
+        "step": "grounding_check",
+        "detail": {
+          "verdict": "supported",
+          "supporting_quote": "calmer_stressed: CALMER",
+          "reason": "The first row in the source passage contains the phrase \"calmer_stressed: CALMER\", which directly states that the calmer_stressed value is CALMER, matching the candidate answer."
+        }
+      },
+      {
+        "step": "span_verify",
+        "detail": {
+          "supported": true,
+          "match_ratio": 1.0
+        }
+      }
+    ]
+  },
+  {
+    "example_id": "ca6d993e-165c-4cfa-b32b-3c48c328b577",
+    "verdict": "pass",
+    "attempts": 0,
+    "final_reason": "Grounded; citation verified against source.",
+    "final_answer": "3",
+    "trajectory": [
+      {
+        "step": "grounding_check",
+        "detail": {
+          "verdict": "supported",
+          "supporting_quote": "RM_professional_growth: 3",
+          "reason": "The source passage explicitly lists 'RM_professional_growth: 3' for the row with ID 3, matching the candidate answer."
+        }
+      },
+      {
+        "step": "span_verify",
+        "detail": {
+          "supported": true,
+          "match_ratio": 1.0
+        }
+      }
+    ]
+  },
+  {
+    "example_id": "3c7ad362-e48f-4a7c-ac93-61aee26d92aa",
+    "verdict": "pass",
+    "attempts": 0,
+    "final_reason": "Grounded; citation verified against source.",
+    "final_answer": "HR",
+    "trajectory": [
+      {
+        "step": "grounding_check",
+        "detail": {
+          "verdict": "supported",
+          "supporting_quote": "Occupation: HR",
+          "reason": "The source passage explicitly lists Banditaa's occupation as HR, directly supporting the answer."
+        }
+      },
+      {
+        "step": "span_verify",
+        "detail": {
+          "supported": true,
+          "match_ratio": 1.0
+        }
+      }
+    ]
+  },
+  {
+    "example_id": "7dd5b2c4-90a2-4e01-8f3a-e28265418ca5",
+    "verdict": "fixed",
+    "attempts": 1,
+    "final_reason": "Grounded after one regeneration attempt.",
+    "final_answer": "Engineer",
+    "trajectory": [
+      {
+        "step": "grounding_check",
+        "detail": {
+          "verdict": "not_supported",
+          "supporting_quote": "Row 4: ID: 4 | Name: Neetha | Age: 26 | Occupation: Engineer | Gender: Female | Same_ofiice_home_location: Yes | kids: No | RM_save_money: Yes | RM_quality_time: Yes | RM_better_sleep: No | calmer_stressed: STRESSED | RM_professional_growth: 3 | RM_lazy: 4 |",
+          "reason": "The candidate answer 'No' does not state the occupation. The passage explicitly says the occupation is Engineer, so the answer is incorrect and unsupported."
+        }
+      },
+      {
+        "step": "retry_generate",
+        "detail": {
+          "revised_answer": "Engineer"
+        }
+      },
+      {
+        "step": "grounding_check",
+        "detail": {
+          "verdict": "supported",
+          "supporting_quote": "Occupation: Engineer",
+          "reason": "The source passage explicitly states the occupation for ID 4 as Engineer, directly supporting the answer."
+        }
+      },
+      {
+        "step": "span_verify",
+        "detail": {
+          "supported": true,
+          "match_ratio": 1.0
+        }
+      }
+    ]
+  },
+  {
+    "example_id": "49330a2f-b5a2-46e7-8b3f-f8515d4748fa",
+    "verdict": "pass",
+    "attempts": 0,
+    "final_reason": "Grounded; citation verified against source.",
+    "final_answer": "No",
+    "trajectory": [
+      {
+        "step": "grounding_check",
+        "detail": {
+          "verdict": "supported",
+          "supporting_quote": "digital_connect_sufficient: No",
+          "reason": "The first line of the passage explicitly states \"digital_connect_sufficient: No\", directly confirming that digital connectivity is not sufficient."
+        }
+      },
+      {
+        "step": "span_verify",
+        "detail": {
+          "supported": true,
+          "match_ratio": 1.0
+        }
+      }
+    ]
+  },
+  {
+    "example_id": "40bdfcd0-1a3b-4418-bfc6-3f15d8477db1",
+    "verdict": "fixed",
+    "attempts": 1,
+    "final_reason": "Grounded after one regeneration attempt.",
+    "final_answer": "STRESSED",
+    "trajectory": [
+      {
+        "step": "grounding_check",
+        "detail": {
+          "verdict": "not_supported",
+          "supporting_quote": "calmer_stressed: STRESSED",
+          "reason": "The passage states that in the second line the calmer_stressed status is 'STRESSED', not 'No' as the candidate answer claims."
+        }
+      },
+      {
+        "step": "retry_generate",
+        "detail": {
+          "revised_answer": "STRESSED"
+        }
+      },
+      {
+        "step": "grounding_check",
+        "detail": {
+          "verdict": "supported",
+          "supporting_quote": "calmer_stressed: STRESSED",
+          "reason": "The second line (Row 4) explicitly contains the phrase 'calmer_stressed: STRESSED', which directly answers the question."
+        }
+      },
+      {
+        "step": "span_verify",
+        "detail": {
+          "supported": true,
+          "match_ratio": 1.0
+        }
+      }
+    ]
+  },
+  {
+    "example_id": "27f14eee-c164-421e-ab6f-8f6f1f05fb70",
+    "verdict": "fixed",
+    "attempts": 1,
+    "final_reason": "Grounded after one regeneration attempt.",
+    "final_answer": "Recruiter",
+    "trajectory": [
+      {
+        "step": "grounding_check",
+        "detail": {
+          "verdict": "not_supported",
+          "supporting_quote": "",
+          "reason": "The source passage states Ram's occupation is \"Recruiter\", but the candidate answer is \"4\", which does not match or appear in the passage."
+        }
+      },
+      {
+        "step": "retry_generate",
+        "detail": {
+          "revised_answer": "Recruiter"
+        }
+      },
+      {
+        "step": "grounding_check",
+        "detail": {
+          "verdict": "supported",
+          "supporting_quote": "Occupation: Recruiter",
+          "reason": "The passage explicitly states Ram's occupation as Recruiter, directly supporting the answer."
+        }
+      },
+      {
+        "step": "span_verify",
+        "detail": {
+          "supported": true,
+          "match_ratio": 1.0
+        }
+      }
+    ]
+  },
+  {
+    "example_id": "7887d37e-68b7-451c-a84a-e7f65aaa17aa",
+    "verdict": "pass",
+    "attempts": 0,
+    "final_reason": "Grounded; citation verified against source.",
+    "final_answer": "No",
+    "trajectory": [
+      {
+        "step": "grounding_check",
+        "detail": {
+          "verdict": "supported",
+          "supporting_quote": "kids: No",
+          "reason": "The source passage explicitly states \"kids: No\", indicating Ram does not have children, which directly supports the answer \"No\"."
+        }
+      },
+      {
+        "step": "span_verify",
+        "detail": {
+          "supported": true,
+          "match_ratio": 1.0
+        }
+      }
+    ]
+  },
+  {
+    "example_id": "6234581e-e71b-4dcd-84a1-6fc8376948e5",
+    "verdict": "pass",
+    "attempts": 0,
+    "final_reason": "Grounded; citation verified against source.",
+    "final_answer": "No",
+    "trajectory": [
+      {
+        "step": "grounding_check",
+        "detail": {
+          "verdict": "supported",
+          "supporting_quote": "digital_connect_sufficient: No",
+          "reason": "The source passage explicitly includes the phrase 'digital_connect_sufficient: No', directly confirming the answer."
+        }
+      },
+      {
+        "step": "span_verify",
+        "detail": {
+          "supported": true,
+          "match_ratio": 1.0
+        }
+      }
+    ]
+  },
+  {
+    "example_id": "9f5e1c68-3163-4caa-952d-28125f3b46ec",
+    "verdict": "pass",
+    "attempts": 0,
+    "final_reason": "Grounded; citation verified against source.",
+    "final_answer": "27",
+    "trajectory": [
+      {
+        "step": "grounding_check",
+        "detail": {
+          "verdict": "supported",
+          "supporting_quote": "Age: 27",
+          "reason": "The source passage explicitly lists Gaurav's age as 27, directly supporting the answer."
+        }
+      },
+      {
+        "step": "span_verify",
+        "detail": {
+          "supported": true,
+          "match_ratio": 1.0
+        }
+      }
+    ]
+  },
+  {
+    "example_id": "661369dd-72f8-48ba-8dc1-a06b81ba9951",
+    "verdict": "fixed",
+    "attempts": 1,
+    "final_reason": "Grounded after one regeneration attempt.",
+    "final_answer": "No",
+    "trajectory": [
+      {
+        "step": "grounding_check",
+        "detail": {
+          "verdict": "not_supported",
+          "supporting_quote": "kids: No",
+          "reason": "The candidate answer 'Tutor' does not answer the question about whether Gaurav has kids and introduces unrelated information not present in the passage."
+        }
+      },
+      {
+        "step": "retry_generate",
+        "detail": {
+          "revised_answer": "No"
+        }
+      },
+      {
+        "step": "grounding_check",
+        "detail": {
+          "verdict": "supported",
+          "supporting_quote": "kids: No",
+          "reason": "The passage explicitly states 'kids: No', which directly answers the question that Gaurav does not have kids."
+        }
+      },
+      {
+        "step": "span_verify",
+        "detail": {
+          "supported": true,
+          "match_ratio": 1.0
+        }
+      }
+    ]
+  },
+  {
+    "example_id": "3b569a98-d737-4171-875d-a84b3cbeb076",
+    "verdict": "fixed",
+    "attempts": 1,
+    "final_reason": "Grounded after one regeneration attempt.",
+    "final_answer": "3",
+    "trajectory": [
+      {
+        "step": "grounding_check",
+        "detail": {
+          "verdict": "not_supported",
+          "supporting_quote": "",
+          "reason": "The source passage lists RM_professional_growth as 3 in both the initial line and the Row 6 entry, not 2 as claimed by the candidate answer."
+        }
+      },
+      {
+        "step": "retry_generate",
+        "detail": {
+          "revised_answer": "3"
+        }
+      },
+      {
+        "step": "grounding_check",
+        "detail": {
+          "verdict": "supported",
+          "supporting_quote": "RM_professional_growth: 3",
+          "reason": "The source passage explicitly includes the phrase \"RM_professional_growth: 3\", directly answering the question."
+        }
+      },
+      {
+        "step": "span_verify",
+        "detail": {
+          "supported": true,
+          "match_ratio": 1.0
+        }
+      }
+    ]
+  },
+  {
+    "example_id": "83858125-2476-45f7-9beb-ea693f26327c",
+    "verdict": "fixed",
+    "attempts": 1,
+    "final_reason": "Grounded after one regeneration attempt.",
+    "final_answer": "Engineer",
+    "trajectory": [
+      {
+        "step": "grounding_check",
+        "detail": {
+          "verdict": "not_supported",
+          "supporting_quote": "",
+          "reason": "The passage states Sandy's occupation is \"Engineer\", but the candidate answer is \"4\", which does not correspond to the occupation and is not supported by the source."
+        }
+      },
+      {
+        "step": "retry_generate",
+        "detail": {
+          "revised_answer": "Engineer"
+        }
+      },
+      {
+        "step": "grounding_check",
+        "detail": {
+          "verdict": "supported",
+          "supporting_quote": "Occupation: Engineer",
+          "reason": "The source passage includes the line 'Name: Sandy ... Occupation: Engineer', directly confirming that Sandy's occupation is Engineer."
+        }
+      },
+      {
+        "step": "span_verify",
+        "detail": {
+          "supported": true,
+          "match_ratio": 1.0
+        }
+      }
+    ]
+  },
+  {
+    "example_id": "3cf05b67-a052-45d9-82ed-e5a7bfaf25b2",
+    "verdict": "pass",
+    "attempts": 0,
+    "final_reason": "Grounded; citation verified against source.",
+    "final_answer": "4",
+    "trajectory": [
+      {
+        "step": "grounding_check",
+        "detail": {
+          "verdict": "supported",
+          "supporting_quote": "RM_lazy: 4",
+          "reason": "The source passage explicitly lists 'RM_lazy: 4' for Sandy, matching the candidate answer."
+        }
+      },
+      {
+        "step": "span_verify",
+        "detail": {
+          "supported": true,
+          "match_ratio": 1.0
+        }
+      }
+    ]
+  },
+  {
+    "example_id": "bf7df145-4ee3-4f26-9ea4-4bbf796aae61",
+    "verdict": "fixed",
+    "attempts": 1,
+    "final_reason": "Grounded after one regeneration attempt.",
+    "final_answer": "No",
+    "trajectory": [
+      {
+        "step": "grounding_check",
+        "detail": {
+          "verdict": "not_supported",
+          "supporting_quote": "",
+          "reason": "The candidate answer 'Engineer' does not address the question about digital connectivity sufficiency. The passage states 'digital_connect_sufficient: No', indicating that digital connectivity is not sufficient, but the answer provides unrelated information about occupation."
+        }
+      },
+      {
+        "step": "retry_generate",
+        "detail": {
+          "revised_answer": "No"
+        }
+      },
+      {
+        "step": "grounding_check",
+        "detail": {
+          "verdict": "supported",
+          "supporting_quote": "digital_connect_sufficient: No",
+          "reason": "The passage explicitly states 'digital_connect_sufficient: No', directly confirming that digital connectivity is not sufficient."
+        }
+      },
+      {
+        "step": "span_verify",
+        "detail": {
+          "supported": true,
+          "match_ratio": 1.0
+        }
+      }
+    ]
+  },
+  {
+    "example_id": "e674ce23-6032-4489-b237-eeb301228216",
+    "verdict": "pass",
+    "attempts": 0,
+    "final_reason": "Grounded; citation verified against source.",
+    "final_answer": "26",
+    "trajectory": [
+      {
+        "step": "grounding_check",
+        "detail": {
+          "verdict": "supported",
+          "supporting_quote": "Age: 26",
+          "reason": "The source passage explicitly states Ganika's age as 26."
+        }
+      },
+      {
+        "step": "span_verify",
+        "detail": {
+          "supported": true,
+          "match_ratio": 1.0
+        }
+      }
+    ]
+  },
+  {
+    "example_id": "25bd7bd0-5d20-4220-a572-ab04b7581796",
+    "verdict": "pass",
+    "attempts": 0,
+    "final_reason": "Grounded; citation verified against source.",
+    "final_answer": "No",
+    "trajectory": [
+      {
+        "step": "grounding_check",
+        "detail": {
+          "verdict": "supported",
+          "supporting_quote": "kids: No",
+          "reason": "The source passage explicitly states 'kids: No', directly confirming that Ganika does not have kids."
+        }
+      },
+      {
+        "step": "span_verify",
+        "detail": {
+          "supported": true,
+          "match_ratio": 1.0
+        }
+      }
+    ]
+  },
+  {
+    "example_id": "3f2b0421-6160-4932-b6ff-e9672a421c00",
+    "verdict": "pass",
+    "attempts": 0,
+    "final_reason": "Grounded; citation verified against source.",
+    "final_answer": "2",
+    "trajectory": [
+      {
+        "step": "grounding_check",
+        "detail": {
+          "verdict": "supported",
+          "supporting_quote": "RM_lazy: 2",
+          "reason": "The source passage explicitly lists Ganika's RM_lazy rating as 2, matching the candidate answer."
+        }
+      },
+      {
+        "step": "span_verify",
+        "detail": {
+          "supported": true,
+          "match_ratio": 1.0
+        }
+      }
+    ]
+  },
+  {
+    "example_id": "30285330-59b2-43ea-8184-96f4ab916d7a",
+    "verdict": "pass",
+    "attempts": 0,
+    "final_reason": "Grounded; citation verified against source.",
+    "final_answer": "Engineer",
+    "trajectory": [
+      {
+        "step": "grounding_check",
+        "detail": {
+          "verdict": "supported",
+          "supporting_quote": "Occupation: Engineer",
+          "reason": "The source passage explicitly lists Sheetal's occupation as Engineer, directly confirming the candidate answer."
+        }
+      },
+      {
+        "step": "span_verify",
+        "detail": {
+          "supported": true,
+          "match_ratio": 1.0
+        }
+      }
+    ]
+  },
+  {
+    "example_id": "5489f4db-8c19-4355-8431-a97effa17543",
+    "verdict": "pass",
+    "attempts": 0,
+    "final_reason": "Grounded; citation verified against source.",
+    "final_answer": "No",
+    "trajectory": [
+      {
+        "step": "grounding_check",
+        "detail": {
+          "verdict": "supported",
+          "supporting_quote": "kids: No",
+          "reason": "The source passage explicitly states 'kids: No', directly confirming that Sheetal does not have kids."
+        }
+      },
+      {
+        "step": "span_verify",
+        "detail": {
+          "supported": true,
+          "match_ratio": 1.0
+        }
+      }
+    ]
+  },
+  {
+    "example_id": "996569fb-6b3e-47a1-a909-f28cacdfdb83",
+    "verdict": "fixed",
+    "attempts": 1,
+    "final_reason": "Grounded after one regeneration attempt.",
+    "final_answer": "4",
+    "trajectory": [
+      {
+        "step": "grounding_check",
+        "detail": {
+          "verdict": "not_supported",
+          "supporting_quote": "RM_lazy: 4",
+          "reason": "The passage for Sheetal (Row 11) lists RM_lazy as 4, not 2. The candidate answer of 2 contradicts the source."
+        }
+      },
+      {
+        "step": "retry_generate",
+        "detail": {
+          "revised_answer": "4"
+        }
+      },
+      {
+        "step": "grounding_check",
+        "detail": {
+          "verdict": "supported",
+          "supporting_quote": "RM_lazy: 4",
+          "reason": "The source passage for Sheetal includes the phrase \"RM_lazy: 4\", which directly matches the candidate answer."
+        }
+      },
+      {
+        "step": "span_verify",
+        "detail": {
+          "supported": true,
+          "match_ratio": 1.0
+        }
+      }
+    ]
+  },
+  {
+    "example_id": "2c1a255a-2e41-4931-9083-1cace5f87ef3",
+    "verdict": "pass",
+    "attempts": 0,
+    "final_reason": "Grounded; citation verified against source.",
+    "final_answer": "25",
+    "trajectory": [
+      {
+        "step": "grounding_check",
+        "detail": {
+          "verdict": "supported",
+          "supporting_quote": "Age: 25",
+          "reason": "The source passage explicitly lists Abbas's age as 25."
+        }
+      },
+      {
+        "step": "span_verify",
+        "detail": {
+          "supported": true,
+          "match_ratio": 1.0
+        }
+      }
+    ]
+  },
+  {
+    "example_id": "aa898e3d-853b-4317-8f00-dc2a11bc5ad3",
+    "verdict": "fixed",
+    "attempts": 1,
+    "final_reason": "Grounded after one regeneration attempt.",
+    "final_answer": "No",
+    "trajectory": [
+      {
+        "step": "grounding_check",
+        "detail": {
+          "verdict": "not_supported",
+          "supporting_quote": "",
+          "reason": "The candidate answer 'HR' does not answer the question about whether Abbas has kids and is not present in the source passage. The passage explicitly states 'kids: No', which contradicts the answer."
+        }
+      },
+      {
+        "step": "retry_generate",
+        "detail": {
+          "revised_answer": "No"
+        }
+      },
+      {
+        "step": "grounding_check",
+        "detail": {
+          "verdict": "supported",
+          "supporting_quote": "kids: No",
+          "reason": "The source passage explicitly lists 'kids: No' for Abbas, directly confirming that he does not have kids."
+        }
+      },
+      {
+        "step": "span_verify",
+        "detail": {
+          "supported": true,
+          "match_ratio": 1.0
+        }
+      }
+    ]
+  },
+  {
+    "example_id": "38b87728-f79d-4ba9-8a49-1badce9bf41f",
+    "verdict": "pass",
+    "attempts": 0,
+    "final_reason": "Grounded; citation verified against source.",
+    "final_answer": "4",
+    "trajectory": [
+      {
+        "step": "grounding_check",
+        "detail": {
+          "verdict": "supported",
+          "supporting_quote": "RM_productive: 4",
+          "reason": "The source passage explicitly lists Abbas's RM_productive rating as 4, matching the candidate answer."
+        }
+      },
+      {
+        "step": "span_verify",
+        "detail": {
+          "supported": true,
+          "match_ratio": 1.0
+        }
+      }
+    ]
+  },
+  {
+    "example_id": "329919fe-dec2-4dfc-b915-efbc7e75e6f9",
+    "verdict": "pass",
+    "attempts": 0,
+    "final_reason": "Grounded; citation verified against source.",
+    "final_answer": "4",
+    "trajectory": [
+      {
+        "step": "grounding_check",
+        "detail": {
+          "verdict": "supported",
+          "supporting_quote": "RM_productive: 4",
+          "reason": "The source passage explicitly contains the phrase \"RM_productive: 4\", directly confirming the answer."
+        }
+      },
+      {
+        "step": "span_verify",
+        "detail": {
+          "supported": true,
+          "match_ratio": 1.0
+        }
+      }
+    ]
+  },
+  {
+    "example_id": "545111d1-b63d-4b45-be6b-43aa366dd77f",
+    "verdict": "pass",
+    "attempts": 0,
+    "final_reason": "Grounded; citation verified against source.",
+    "final_answer": "No",
+    "trajectory": [
+      {
+        "step": "grounding_check",
+        "detail": {
+          "verdict": "supported",
+          "supporting_quote": "digital_connect_sufficient: No",
+          "reason": "The source passage explicitly states 'digital_connect_sufficient: No', which directly supports the answer 'No' to the question of whether digital_connect_sufficient is sufficient."
+        }
+      },
+      {
+        "step": "span_verify",
+        "detail": {
+          "supported": true,
+          "match_ratio": 1.0
+        }
+      }
+    ]
+  },
+  {
+    "example_id": "ad4d6a83-c73b-443c-bf1b-34e17fbcff92",
+    "verdict": "fixed",
+    "attempts": 1,
+    "final_reason": "Grounded after one regeneration attempt.",
+    "final_answer": "Yes",
+    "trajectory": [
+      {
+        "step": "grounding_check",
+        "detail": {
+          "verdict": "not_supported",
+          "supporting_quote": "",
+          "reason": "The candidate answer \"CALMER\" does not address the question about RM's job opportunities and is unrelated to the source passage, which states \"RM_job_opportunities: Yes\"."
+        }
+      },
+      {
+        "step": "retry_generate",
+        "detail": {
+          "revised_answer": "Yes"
+        }
+      },
+      {
+        "step": "grounding_check",
+        "detail": {
+          "verdict": "supported",
+          "supporting_quote": "RM_job_opportunities: Yes",
+          "reason": "The source passage explicitly states 'RM_job_opportunities: Yes', directly confirming that RM has job opportunities."
+        }
+      },
+      {
+        "step": "span_verify",
+        "detail": {
+          "supported": true,
+          "match_ratio": 1.0
+        }
+      }
+    ]
+  }
+]

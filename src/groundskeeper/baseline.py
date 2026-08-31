@@ -26,7 +26,12 @@ class BaselineResult:
 
 
 def run_baseline(examples: list[TrainingExample]) -> list[BaselineResult]:
-    seen: dict[str, TrainingExample] = {}
+    # Keyed on (question, answer), not answer alone: on short categorical
+    # answers (survey data — "Yes"/"No"/"24") the same answer text legitimately
+    # recurs across unrelated questions. Matching on answer-only mistook that
+    # coincidence for redundancy; a true duplicate is the same question
+    # answered the same way twice (e.g. via overlapping chunks).
+    seen: dict[tuple[str, str], TrainingExample] = {}
     results: list[BaselineResult] = []
 
     for example in examples:
@@ -35,16 +40,16 @@ def run_baseline(examples: list[TrainingExample]) -> list[BaselineResult]:
             results.append(BaselineResult(example, shipped=False, reason="empty output"))
             continue
 
-        normalized = " ".join(output.lower().split())
-        if normalized in seen:
+        key = (" ".join(example.input_text.lower().split()), " ".join(output.lower().split()))
+        if key in seen:
             results.append(
                 BaselineResult(
-                    example, shipped=False, reason=f"exact duplicate of example {seen[normalized].id}"
+                    example, shipped=False, reason=f"exact duplicate of example {seen[key].id}"
                 )
             )
             continue
 
-        seen[normalized] = example
+        seen[key] = example
         results.append(
             BaselineResult(example, shipped=True, reason="passed structural checks (no grounding check exists today)")
         )

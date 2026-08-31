@@ -1,0 +1,629 @@
+[
+  {
+    "example": {
+      "id": "ef26785d-0b38-4828-ab89-46a1d115fe06",
+      "created_at": "2026-08-31T13:41:50.614268Z",
+      "updated_at": null,
+      "metadata": {},
+      "input_text": "What is the ID of the person described in the passage?",
+      "output_text": "1",
+      "task_type": "qa_generation",
+      "source_document_id": "006aaf7f-0e38-4cdc-8d72-3f427b8b1bac",
+      "source_chunk_id": "f2ef2398-57d5-4f40-8099-da47b2961586",
+      "quality_scores": {
+        "generation_time_seconds": 1.4905707449943293
+      }
+    },
+    "label": "clean",
+    "corruption_type": null,
+    "ground_truth_note": "unmodified"
+  },
+  {
+    "example": {
+      "id": "f2fe1c55-2629-4d84-a7a1-b5f1b503400c",
+      "created_at": "2026-08-31T13:41:50.614306Z",
+      "updated_at": null,
+      "metadata": {},
+      "input_text": "What is Bhavana's occupation?",
+      "output_text": "24",
+      "task_type": "qa_generation",
+      "source_document_id": "006aaf7f-0e38-4cdc-8d72-3f427b8b1bac",
+      "source_chunk_id": "f2ef2398-57d5-4f40-8099-da47b2961586",
+      "quality_scores": {
+        "generation_time_seconds": 1.4905707449943293
+      }
+    },
+    "label": "corrupted",
+    "corruption_type": "unrelated_answer",
+    "ground_truth_note": "Swapped in the answer to a different question: 'How old is Harry?'"
+  },
+  {
+    "example": {
+      "id": "b4999001-26da-4cb9-b89d-e9b8e53028fe",
+      "created_at": "2026-08-31T13:41:50.614324Z",
+      "updated_at": null,
+      "metadata": {},
+      "input_text": "Does Bhavana have kids?",
+      "output_text": "No",
+      "task_type": "qa_generation",
+      "source_document_id": "006aaf7f-0e38-4cdc-8d72-3f427b8b1bac",
+      "source_chunk_id": "f2ef2398-57d5-4f40-8099-da47b2961586",
+      "quality_scores": {
+        "generation_time_seconds": 1.4905707449943293
+      }
+    },
+    "label": "corrupted",
+    "corruption_type": "unrelated_answer",
+    "ground_truth_note": "Swapped in the answer to a different question: 'Is digital connectivity sufficient according to the passage?'"
+  },
+  {
+    "example": {
+      "id": "d54d5be9-a9c7-478e-9c4c-1d8d6440c182",
+      "created_at": "2026-08-31T13:41:50.932270Z",
+      "updated_at": null,
+      "metadata": {},
+      "input_text": "What is Harry's occupation?",
+      "output_text": "Yes",
+      "task_type": "qa_generation",
+      "source_document_id": "006aaf7f-0e38-4cdc-8d72-3f427b8b1bac",
+      "source_chunk_id": "bf1f29d0-7c3c-46d8-84ca-fabafeecc107",
+      "quality_scores": {
+        "generation_time_seconds": 1.2945661369885784
+      }
+    },
+    "label": "corrupted",
+    "corruption_type": "unrelated_answer",
+    "ground_truth_note": "Swapped in the answer to a different question: 'Does RM have job opportunities?'"
+  },
+  {
+    "example": {
+      "id": "97aeea08-2910-4aa2-ad2b-fb88fd19729a",
+      "created_at": "2026-08-31T13:41:50.932339Z",
+      "updated_at": null,
+      "metadata": {},
+      "input_text": "How old is Harry?",
+      "output_text": "24",
+      "task_type": "qa_generation",
+      "source_document_id": "006aaf7f-0e38-4cdc-8d72-3f427b8b1bac",
+      "source_chunk_id": "bf1f29d0-7c3c-46d8-84ca-fabafeecc107",
+      "quality_scores": {
+        "generation_time_seconds": 1.2945661369885784
+      }
+    },
+    "label": "clean",
+    "corruption_type": null,
+    "ground_truth_note": "unmodified"
+  },
+  {
+    "example": {
+      "id": "7e345d8a-2907-435f-923d-a03031ab0135",
+      "created_at": "2026-08-31T13:41:50.932371Z",
+      "updated_at": null,
+      "metadata": {},
+      "input_text": "Does Harry have any kids?",
+      "output_text": "No",
+      "task_type": "qa_generation",
+      "source_document_id": "006aaf7f-0e38-4cdc-8d72-3f427b8b1bac",
+      "source_chunk_id": "bf1f29d0-7c3c-46d8-84ca-fabafeecc107",
+      "quality_scores": {
+        "generation_time_seconds": 1.2945661369885784
+      }
+    },
+    "label": "clean",
+    "corruption_type": null,
+    "ground_truth_note": "unmodified"
+  },
+  {
+    "example": {
+      "id": "00f4beff-06cf-4dfe-bcff-1a5542d52eb5",
+      "created_at": "2026-08-31T13:41:51.312404Z",
+      "updated_at": null,
+      "metadata": {},
+      "input_text": "What is the calmer_stressed value in the first row?",
+      "output_text": "CALMER",
+      "task_type": "qa_generation",
+      "source_document_id": "006aaf7f-0e38-4cdc-8d72-3f427b8b1bac",
+      "source_chunk_id": "bca10375-bb63-4a38-82ac-66ecec1e5f09",
+      "quality_scores": {
+        "generation_time_seconds": 1.6734916220011655
+      }
+    },
+    "label": "clean",
+    "corruption_type": null,
+    "ground_truth_note": "unmodified"
+  },
+  {
+    "example": {
+      "id": "ca6d993e-165c-4cfa-b32b-3c48c328b577",
+      "created_at": "2026-08-31T13:41:51.312466Z",
+      "updated_at": null,
+      "metadata": {},
+      "input_text": "What is the RM_professional_growth rating for the person with ID 3?",
+      "output_text": "3",
+      "task_type": "qa_generation",
+      "source_document_id": "006aaf7f-0e38-4cdc-8d72-3f427b8b1bac",
+      "source_chunk_id": "bca10375-bb63-4a38-82ac-66ecec1e5f09",
+      "quality_scores": {
+        "generation_time_seconds": 1.6734916220011655
+      }
+    },
+    "label": "clean",
+    "corruption_type": null,
+    "ground_truth_note": "unmodified"
+  },
+  {
+    "example": {
+      "id": "3c7ad362-e48f-4a7c-ac93-61aee26d92aa",
+      "created_at": "2026-08-31T13:41:51.312497Z",
+      "updated_at": null,
+      "metadata": {},
+      "input_text": "What is the occupation of Banditaa?",
+      "output_text": "HR",
+      "task_type": "qa_generation",
+      "source_document_id": "006aaf7f-0e38-4cdc-8d72-3f427b8b1bac",
+      "source_chunk_id": "bca10375-bb63-4a38-82ac-66ecec1e5f09",
+      "quality_scores": {
+        "generation_time_seconds": 1.6734916220011655
+      }
+    },
+    "label": "clean",
+    "corruption_type": null,
+    "ground_truth_note": "unmodified"
+  },
+  {
+    "example": {
+      "id": "7dd5b2c4-90a2-4e01-8f3a-e28265418ca5",
+      "created_at": "2026-08-31T13:41:50.994925Z",
+      "updated_at": null,
+      "metadata": {},
+      "input_text": "What is the occupation of the person with ID 4?",
+      "output_text": "No",
+      "task_type": "qa_generation",
+      "source_document_id": "006aaf7f-0e38-4cdc-8d72-3f427b8b1bac",
+      "source_chunk_id": "87c8d40b-13cf-413c-bb03-7ad730ae6634",
+      "quality_scores": {
+        "generation_time_seconds": 1.3551138449984137
+      }
+    },
+    "label": "corrupted",
+    "corruption_type": "unrelated_answer",
+    "ground_truth_note": "Swapped in the answer to a different question: 'Does Harry have any kids?'"
+  },
+  {
+    "example": {
+      "id": "49330a2f-b5a2-46e7-8b3f-f8515d4748fa",
+      "created_at": "2026-08-31T13:41:50.994985Z",
+      "updated_at": null,
+      "metadata": {},
+      "input_text": "According to the first line, is digital connectivity sufficient?",
+      "output_text": "No",
+      "task_type": "qa_generation",
+      "source_document_id": "006aaf7f-0e38-4cdc-8d72-3f427b8b1bac",
+      "source_chunk_id": "87c8d40b-13cf-413c-bb03-7ad730ae6634",
+      "quality_scores": {
+        "generation_time_seconds": 1.3551138449984137
+      }
+    },
+    "label": "clean",
+    "corruption_type": null,
+    "ground_truth_note": "unmodified"
+  },
+  {
+    "example": {
+      "id": "40bdfcd0-1a3b-4418-bfc6-3f15d8477db1",
+      "created_at": "2026-08-31T13:41:50.995017Z",
+      "updated_at": null,
+      "metadata": {},
+      "input_text": "In the second line, what is the calmer_stressed status?",
+      "output_text": "No",
+      "task_type": "qa_generation",
+      "source_document_id": "006aaf7f-0e38-4cdc-8d72-3f427b8b1bac",
+      "source_chunk_id": "87c8d40b-13cf-413c-bb03-7ad730ae6634",
+      "quality_scores": {
+        "generation_time_seconds": 1.3551138449984137
+      }
+    },
+    "label": "corrupted",
+    "corruption_type": "unrelated_answer",
+    "ground_truth_note": "Swapped in the answer to a different question: 'Does Ganika have kids?'"
+  },
+  {
+    "example": {
+      "id": "27f14eee-c164-421e-ab6f-8f6f1f05fb70",
+      "created_at": "2026-08-31T13:41:51.976521Z",
+      "updated_at": null,
+      "metadata": {},
+      "input_text": "What is Ram's occupation?",
+      "output_text": "4",
+      "task_type": "qa_generation",
+      "source_document_id": "006aaf7f-0e38-4cdc-8d72-3f427b8b1bac",
+      "source_chunk_id": "33a988ff-26ea-4475-9b4f-d948dc527e34",
+      "quality_scores": {
+        "generation_time_seconds": 1.361989174009068
+      }
+    },
+    "label": "corrupted",
+    "corruption_type": "unrelated_answer",
+    "ground_truth_note": "Swapped in the answer to a different question: 'What is the value of RM_productive?'"
+  },
+  {
+    "example": {
+      "id": "7887d37e-68b7-451c-a84a-e7f65aaa17aa",
+      "created_at": "2026-08-31T13:41:51.976580Z",
+      "updated_at": null,
+      "metadata": {},
+      "input_text": "Does Ram have children?",
+      "output_text": "No",
+      "task_type": "qa_generation",
+      "source_document_id": "006aaf7f-0e38-4cdc-8d72-3f427b8b1bac",
+      "source_chunk_id": "33a988ff-26ea-4475-9b4f-d948dc527e34",
+      "quality_scores": {
+        "generation_time_seconds": 1.361989174009068
+      }
+    },
+    "label": "clean",
+    "corruption_type": null,
+    "ground_truth_note": "unmodified"
+  },
+  {
+    "example": {
+      "id": "6234581e-e71b-4dcd-84a1-6fc8376948e5",
+      "created_at": "2026-08-31T13:41:51.976609Z",
+      "updated_at": null,
+      "metadata": {},
+      "input_text": "Is digital_connect_sufficient?",
+      "output_text": "No",
+      "task_type": "qa_generation",
+      "source_document_id": "006aaf7f-0e38-4cdc-8d72-3f427b8b1bac",
+      "source_chunk_id": "33a988ff-26ea-4475-9b4f-d948dc527e34",
+      "quality_scores": {
+        "generation_time_seconds": 1.361989174009068
+      }
+    },
+    "label": "clean",
+    "corruption_type": null,
+    "ground_truth_note": "unmodified"
+  },
+  {
+    "example": {
+      "id": "9f5e1c68-3163-4caa-952d-28125f3b46ec",
+      "created_at": "2026-08-31T13:42:10.467198Z",
+      "updated_at": null,
+      "metadata": {},
+      "input_text": "What is Gaurav's age?",
+      "output_text": "27",
+      "task_type": "qa_generation",
+      "source_document_id": "006aaf7f-0e38-4cdc-8d72-3f427b8b1bac",
+      "source_chunk_id": "664ba27f-76ef-4eaf-810a-588de2efb239",
+      "quality_scores": {
+        "generation_time_seconds": 19.534503439004766
+      }
+    },
+    "label": "clean",
+    "corruption_type": null,
+    "ground_truth_note": "unmodified"
+  },
+  {
+    "example": {
+      "id": "661369dd-72f8-48ba-8dc1-a06b81ba9951",
+      "created_at": "2026-08-31T13:42:10.467260Z",
+      "updated_at": null,
+      "metadata": {},
+      "input_text": "Does Gaurav have kids?",
+      "output_text": "Tutor",
+      "task_type": "qa_generation",
+      "source_document_id": "006aaf7f-0e38-4cdc-8d72-3f427b8b1bac",
+      "source_chunk_id": "664ba27f-76ef-4eaf-810a-588de2efb239",
+      "quality_scores": {
+        "generation_time_seconds": 19.534503439004766
+      }
+    },
+    "label": "corrupted",
+    "corruption_type": "unrelated_answer",
+    "ground_truth_note": "Swapped in the answer to a different question: \"What is Bhavana's occupation?\""
+  },
+  {
+    "example": {
+      "id": "3b569a98-d737-4171-875d-a84b3cbeb076",
+      "created_at": "2026-08-31T13:42:10.467292Z",
+      "updated_at": null,
+      "metadata": {},
+      "input_text": "What is the value of RM_professional_growth?",
+      "output_text": "2",
+      "task_type": "qa_generation",
+      "source_document_id": "006aaf7f-0e38-4cdc-8d72-3f427b8b1bac",
+      "source_chunk_id": "664ba27f-76ef-4eaf-810a-588de2efb239",
+      "quality_scores": {
+        "generation_time_seconds": 19.534503439004766
+      }
+    },
+    "label": "corrupted",
+    "corruption_type": "number_swap",
+    "ground_truth_note": "Altered a number in the answer"
+  },
+  {
+    "example": {
+      "id": "83858125-2476-45f7-9beb-ea693f26327c",
+      "created_at": "2026-08-31T13:42:00.679452Z",
+      "updated_at": null,
+      "metadata": {},
+      "input_text": "What is Sandy's occupation?",
+      "output_text": "4",
+      "task_type": "qa_generation",
+      "source_document_id": "006aaf7f-0e38-4cdc-8d72-3f427b8b1bac",
+      "source_chunk_id": "a8cccc9b-18a8-4940-9299-6d4901c1cf97",
+      "quality_scores": {
+        "generation_time_seconds": 9.684161893994315
+      }
+    },
+    "label": "corrupted",
+    "corruption_type": "unrelated_answer",
+    "ground_truth_note": "Swapped in the answer to a different question: \"What is Abbas's RM_productive rating?\""
+  },
+  {
+    "example": {
+      "id": "3cf05b67-a052-45d9-82ed-e5a7bfaf25b2",
+      "created_at": "2026-08-31T13:42:00.679516Z",
+      "updated_at": null,
+      "metadata": {},
+      "input_text": "What is the RM_lazy rating for Sandy?",
+      "output_text": "4",
+      "task_type": "qa_generation",
+      "source_document_id": "006aaf7f-0e38-4cdc-8d72-3f427b8b1bac",
+      "source_chunk_id": "a8cccc9b-18a8-4940-9299-6d4901c1cf97",
+      "quality_scores": {
+        "generation_time_seconds": 9.684161893994315
+      }
+    },
+    "label": "clean",
+    "corruption_type": null,
+    "ground_truth_note": "unmodified"
+  },
+  {
+    "example": {
+      "id": "bf7df145-4ee3-4f26-9ea4-4bbf796aae61",
+      "created_at": "2026-08-31T13:42:00.679549Z",
+      "updated_at": null,
+      "metadata": {},
+      "input_text": "Is digital connectivity sufficient according to the passage?",
+      "output_text": "Engineer",
+      "task_type": "qa_generation",
+      "source_document_id": "006aaf7f-0e38-4cdc-8d72-3f427b8b1bac",
+      "source_chunk_id": "a8cccc9b-18a8-4940-9299-6d4901c1cf97",
+      "quality_scores": {
+        "generation_time_seconds": 9.684161893994315
+      }
+    },
+    "label": "corrupted",
+    "corruption_type": "unrelated_answer",
+    "ground_truth_note": "Swapped in the answer to a different question: 'What is the occupation of the person with ID 4?'"
+  },
+  {
+    "example": {
+      "id": "e674ce23-6032-4489-b237-eeb301228216",
+      "created_at": "2026-08-31T13:42:03.735072Z",
+      "updated_at": null,
+      "metadata": {},
+      "input_text": "What is Ganika's age?",
+      "output_text": "26",
+      "task_type": "qa_generation",
+      "source_document_id": "006aaf7f-0e38-4cdc-8d72-3f427b8b1bac",
+      "source_chunk_id": "e04900c3-848b-49c3-98b5-3a158061f48e",
+      "quality_scores": {
+        "generation_time_seconds": 3.0553139759867918
+      }
+    },
+    "label": "clean",
+    "corruption_type": null,
+    "ground_truth_note": "unmodified"
+  },
+  {
+    "example": {
+      "id": "25bd7bd0-5d20-4220-a572-ab04b7581796",
+      "created_at": "2026-08-31T13:42:03.735094Z",
+      "updated_at": null,
+      "metadata": {},
+      "input_text": "Does Ganika have kids?",
+      "output_text": "No",
+      "task_type": "qa_generation",
+      "source_document_id": "006aaf7f-0e38-4cdc-8d72-3f427b8b1bac",
+      "source_chunk_id": "e04900c3-848b-49c3-98b5-3a158061f48e",
+      "quality_scores": {
+        "generation_time_seconds": 3.0553139759867918
+      }
+    },
+    "label": "clean",
+    "corruption_type": null,
+    "ground_truth_note": "unmodified"
+  },
+  {
+    "example": {
+      "id": "3f2b0421-6160-4932-b6ff-e9672a421c00",
+      "created_at": "2026-08-31T13:42:03.735104Z",
+      "updated_at": null,
+      "metadata": {},
+      "input_text": "What is Ganika's RM_lazy rating?",
+      "output_text": "2",
+      "task_type": "qa_generation",
+      "source_document_id": "006aaf7f-0e38-4cdc-8d72-3f427b8b1bac",
+      "source_chunk_id": "e04900c3-848b-49c3-98b5-3a158061f48e",
+      "quality_scores": {
+        "generation_time_seconds": 3.0553139759867918
+      }
+    },
+    "label": "clean",
+    "corruption_type": null,
+    "ground_truth_note": "unmodified"
+  },
+  {
+    "example": {
+      "id": "30285330-59b2-43ea-8184-96f4ab916d7a",
+      "created_at": "2026-08-31T13:42:14.043710Z",
+      "updated_at": null,
+      "metadata": {},
+      "input_text": "What is Sheetal's occupation?",
+      "output_text": "Engineer",
+      "task_type": "qa_generation",
+      "source_document_id": "006aaf7f-0e38-4cdc-8d72-3f427b8b1bac",
+      "source_chunk_id": "8dbeb85e-f459-4856-a72a-535e609e3b5a",
+      "quality_scores": {
+        "generation_time_seconds": 10.308514357020613
+      }
+    },
+    "label": "clean",
+    "corruption_type": null,
+    "ground_truth_note": "unmodified"
+  },
+  {
+    "example": {
+      "id": "5489f4db-8c19-4355-8431-a97effa17543",
+      "created_at": "2026-08-31T13:42:14.043740Z",
+      "updated_at": null,
+      "metadata": {},
+      "input_text": "Does Sheetal have kids?",
+      "output_text": "No",
+      "task_type": "qa_generation",
+      "source_document_id": "006aaf7f-0e38-4cdc-8d72-3f427b8b1bac",
+      "source_chunk_id": "8dbeb85e-f459-4856-a72a-535e609e3b5a",
+      "quality_scores": {
+        "generation_time_seconds": 10.308514357020613
+      }
+    },
+    "label": "clean",
+    "corruption_type": null,
+    "ground_truth_note": "unmodified"
+  },
+  {
+    "example": {
+      "id": "996569fb-6b3e-47a1-a909-f28cacdfdb83",
+      "created_at": "2026-08-31T13:42:14.043755Z",
+      "updated_at": null,
+      "metadata": {},
+      "input_text": "What rating did Sheetal give for RM_lazy?",
+      "output_text": "2",
+      "task_type": "qa_generation",
+      "source_document_id": "006aaf7f-0e38-4cdc-8d72-3f427b8b1bac",
+      "source_chunk_id": "8dbeb85e-f459-4856-a72a-535e609e3b5a",
+      "quality_scores": {
+        "generation_time_seconds": 10.308514357020613
+      }
+    },
+    "label": "corrupted",
+    "corruption_type": "number_swap",
+    "ground_truth_note": "Altered a number in the answer"
+  },
+  {
+    "example": {
+      "id": "2c1a255a-2e41-4931-9083-1cace5f87ef3",
+      "created_at": "2026-08-31T13:42:23.455681Z",
+      "updated_at": null,
+      "metadata": {},
+      "input_text": "What is Abbas's age?",
+      "output_text": "25",
+      "task_type": "qa_generation",
+      "source_document_id": "006aaf7f-0e38-4cdc-8d72-3f427b8b1bac",
+      "source_chunk_id": "0341f430-e7fe-40fe-8359-2137ad9939ee",
+      "quality_scores": {
+        "generation_time_seconds": 12.988120821013581
+      }
+    },
+    "label": "clean",
+    "corruption_type": null,
+    "ground_truth_note": "unmodified"
+  },
+  {
+    "example": {
+      "id": "aa898e3d-853b-4317-8f00-dc2a11bc5ad3",
+      "created_at": "2026-08-31T13:42:23.455740Z",
+      "updated_at": null,
+      "metadata": {},
+      "input_text": "Does Abbas have kids?",
+      "output_text": "HR",
+      "task_type": "qa_generation",
+      "source_document_id": "006aaf7f-0e38-4cdc-8d72-3f427b8b1bac",
+      "source_chunk_id": "0341f430-e7fe-40fe-8359-2137ad9939ee",
+      "quality_scores": {
+        "generation_time_seconds": 12.988120821013581
+      }
+    },
+    "label": "corrupted",
+    "corruption_type": "unrelated_answer",
+    "ground_truth_note": "Swapped in the answer to a different question: 'What is the occupation of Banditaa?'"
+  },
+  {
+    "example": {
+      "id": "38b87728-f79d-4ba9-8a49-1badce9bf41f",
+      "created_at": "2026-08-31T13:42:23.455771Z",
+      "updated_at": null,
+      "metadata": {},
+      "input_text": "What is Abbas's RM_productive rating?",
+      "output_text": "4",
+      "task_type": "qa_generation",
+      "source_document_id": "006aaf7f-0e38-4cdc-8d72-3f427b8b1bac",
+      "source_chunk_id": "0341f430-e7fe-40fe-8359-2137ad9939ee",
+      "quality_scores": {
+        "generation_time_seconds": 12.988120821013581
+      }
+    },
+    "label": "clean",
+    "corruption_type": null,
+    "ground_truth_note": "unmodified"
+  },
+  {
+    "example": {
+      "id": "329919fe-dec2-4dfc-b915-efbc7e75e6f9",
+      "created_at": "2026-08-31T13:42:19.849756Z",
+      "updated_at": null,
+      "metadata": {},
+      "input_text": "What is the value of RM_productive?",
+      "output_text": "4",
+      "task_type": "qa_generation",
+      "source_document_id": "006aaf7f-0e38-4cdc-8d72-3f427b8b1bac",
+      "source_chunk_id": "9b80ecd6-e0cd-4fd7-b2b6-f702ade4de05",
+      "quality_scores": {
+        "generation_time_seconds": 5.805841164983576
+      }
+    },
+    "label": "clean",
+    "corruption_type": null,
+    "ground_truth_note": "unmodified"
+  },
+  {
+    "example": {
+      "id": "545111d1-b63d-4b45-be6b-43aa366dd77f",
+      "created_at": "2026-08-31T13:42:19.850112Z",
+      "updated_at": null,
+      "metadata": {},
+      "input_text": "Is digital_connect_sufficient sufficient?",
+      "output_text": "No",
+      "task_type": "qa_generation",
+      "source_document_id": "006aaf7f-0e38-4cdc-8d72-3f427b8b1bac",
+      "source_chunk_id": "9b80ecd6-e0cd-4fd7-b2b6-f702ade4de05",
+      "quality_scores": {
+        "generation_time_seconds": 5.805841164983576
+      }
+    },
+    "label": "clean",
+    "corruption_type": null,
+    "ground_truth_note": "unmodified"
+  },
+  {
+    "example": {
+      "id": "ad4d6a83-c73b-443c-bf1b-34e17fbcff92",
+      "created_at": "2026-08-31T13:42:19.850192Z",
+      "updated_at": null,
+      "metadata": {},
+      "input_text": "Does RM have job opportunities?",
+      "output_text": "CALMER",
+      "task_type": "qa_generation",
+      "source_document_id": "006aaf7f-0e38-4cdc-8d72-3f427b8b1bac",
+      "source_chunk_id": "9b80ecd6-e0cd-4fd7-b2b6-f702ade4de05",
+      "quality_scores": {
+        "generation_time_seconds": 5.805841164983576
+      }
+    },
+    "label": "corrupted",
+    "corruption_type": "unrelated_answer",
+    "ground_truth_note": "Swapped in the answer to a different question: 'What is the calmer_stressed value in the first row?'"
+  }
+]
